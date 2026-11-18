@@ -68,3 +68,30 @@ export const allFeatures = [
   "Multiple locations & calendars",
   "Team inbox & handoff",
 ];
+
+export const pricingFaq = [
+  {
+    id: 1,
+    question: "Can I upgrade or downgrade my plan?",
+    answer:
+      "Yes. You can upgrade or downgrade your subscription as your business needs change, ensuring you always have the right tools for your operations.",
+  },
+  {
+    id: 2,
+    question: "What's included in each pricing plan?",
+    answer:
+      "Each plan includes a different set of AI-powered tools and business features. Compare the plans above to find the right combination for your business.",
+  },
+  {
+    id: 3,
+    question: "Can I switch from monthly to yearly billing?",
+    answer:
+      "Absolutely. You can choose between monthly and yearly billing based on your preference and manage your subscription accordingly.",
+  },
+  {
+    id: 4,
+    question: "Can I add more features as my business grows?",
+    answer:
+      "Yes. You can move to a higher plan to access additional capabilities, automation tools, and features as your business expands.",
+  },
+];
