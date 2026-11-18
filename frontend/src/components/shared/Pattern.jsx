@@ -33,17 +33,19 @@ const Pattern = () => {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute top-0 inset-x-0 h-[750px] overflow-hidden select-none z-0"
+      className="
+        pointer-events-none absolute top-0 inset-x-0 h-[850px] overflow-hidden select-none z-0
+        [mask-image:linear-gradient(to_bottom,#000_15%,transparent_95%)]
+        [-webkit-mask-image:linear-gradient(to_bottom,#000_15%,transparent_95%)]
+      "
     >
-      {/* 1. Base ambient grid (subtle wireframe fading out toward bottom) */}
+      {/* 1. Base ambient grid (subtle wireframe) */}
       <div
         className="
           pointer-events-none absolute inset-0
           opacity-[0.10]
           bg-[linear-gradient(#ffffff47_1px,transparent_1px),linear-gradient(90deg,#ffffff47_1px,transparent_1px)]
           bg-[length:58px_58px]
-          [mask-image:linear-gradient(#000_30%,transparent_95%)]
-          [-webkit-mask-image:linear-gradient(#000_30%,transparent_95%)]
         "
       />
 
@@ -70,6 +72,9 @@ const Pattern = () => {
           background: mouseRadialGlow,
         }}
       />
+
+      {/* 4. Feathered fade out at the bottom to ensure 100% seamless blending */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-midnight via-midnight/60 to-transparent" />
     </div>
   );
 };
