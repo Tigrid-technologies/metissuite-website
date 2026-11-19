@@ -9,6 +9,8 @@ import {
   Layers,
 } from "lucide-react";
 import { howItWorksSpotlight } from "../../utils/howItWorksItems";
+import { RollingWords } from "../shared/RollingText";
+import RollingNumber from "../shared/RollingNumber";
 
 const HowItWorksSpotlight = () => {
   const scrollToPipeline = () => {
@@ -44,17 +46,19 @@ const HowItWorksSpotlight = () => {
             <span className="text-gold">{howItWorksSpotlight.badge}</span>
           </motion.div>
 
-          {/* Headline */}
+          {/* Headline with Rolling Words Animation */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-ivory leading-[1.12]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-ivory leading-[1.18]"
           >
             {howItWorksSpotlight.headingStart}{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal via-[#44ecd8] to-gold">
-              {howItWorksSpotlight.headingHighlight}
-            </span>
+            <RollingWords
+              words={howItWorksSpotlight.rollingWords}
+              className="text-transparent bg-clip-text bg-gradient-to-r from-teal via-[#44ecd8] to-gold"
+            />{" "}
+            operate as one.
           </motion.h1>
 
           {/* Subtitle */}
@@ -115,7 +119,7 @@ const HowItWorksSpotlight = () => {
                 className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-teal/30 transition-colors"
               >
                 <div className="font-secondary text-2xl sm:text-3xl font-extrabold text-ivory tracking-tight">
-                  {stat.value}
+                  <RollingNumber value={stat.value} delay={0.2 + i * 0.1} />
                 </div>
                 <div className="mt-1 text-xs font-bold text-teal">
                   {stat.label}

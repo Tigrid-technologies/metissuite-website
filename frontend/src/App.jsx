@@ -14,6 +14,7 @@ import Contact from "./Pages/Contact";
 import ClientResults from "./Pages/ClientResults";
 import BookWalkthrough from "./Pages/BookWalkthrough";
 import HowItWorks from "./Pages/HowItWorks";
+import Services from "./Pages/Services";
 import ClipWipeCurtain from "./components/shared/ClipWipeCurtain";
 
 // Direct animated page routes without using <Outlet />
@@ -26,7 +27,8 @@ const AnimatedPages = () => {
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
-          <Route path="/what-we-do" element={<HowItWorks />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/what-we-do" element={<Services />} />
           <Route path="/client-results" element={<ClientResults />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />

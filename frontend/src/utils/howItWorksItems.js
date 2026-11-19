@@ -2,6 +2,12 @@ export const howItWorksSpotlight = {
   badge: "System Architecture & Mechanics",
   headingStart: "How autonomous agents and",
   headingHighlight: "human control operate as one.",
+  rollingWords: [
+    "human control",
+    "deterministic rules",
+    "clinical precision",
+    "verified execution",
+  ],
   description:
     "MetisSuiteAI does not replace your team—it amplifies your operational tempo. Here is the exact mechanics of how data is ingested, orchestrated across 6 specialized agents, checked by human judgment, and synced directly to your systems.",
   stats: [
