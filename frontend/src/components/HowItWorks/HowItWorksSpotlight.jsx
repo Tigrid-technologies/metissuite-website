@@ -43,7 +43,7 @@ const HowItWorksSpotlight = () => {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/[0.04] border border-gold/10 text-mist text-[12.5px] font-medium tracking-wide mb-6 "
           >
             <Cpu size={14} className="text-gold animate-pulse" />
-            <span className="text-gold">{howItWorksSpotlight.badge}</span>
+            <span className="text-gold font-light">{howItWorksSpotlight.badge}</span>
           </motion.div>
 
           {/* Headline with Rolling Words Animation */}
