@@ -1,8 +1,12 @@
 import React from "react";
 import { BrainCircuit } from "lucide-react";
 import HeroDashboard from "../components/Home/HeroDashboard";
+import OperatingLayer from "../components/Home/OperatingLayer";
 import Ensemble from "../components/Home/Ensemble";
 import LifescienceWorkflow from "../components/Home/LifescienceWorkflow";
+import Meetloop from "../components/Home/Meetloop";
+import BuiltForControl from "../components/Home/BuiltForControl";
+import CallToAction from "../components/shared/CallToAction";
 
 const Home = () => {
   return (
@@ -30,11 +34,23 @@ const Home = () => {
         <HeroDashboard />
       </div>
 
+      {/* 01. The Operating Layer Section with Marquee Ribbon */}
+      <OperatingLayer />
+
       {/* 02. The Ensemble Section */}
       <Ensemble />
 
       {/* 03. Life-Science Ready Workflow Section */}
       <LifescienceWorkflow />
+
+      {/* 04. Metis Meetloop Section */}
+      <Meetloop />
+
+      {/* 05. Built For Control Section */}
+      <BuiltForControl />
+
+      {/* Shared Call To Action */}
+      <CallToAction />
     </div>
   );
 };

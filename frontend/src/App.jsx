@@ -4,12 +4,14 @@ import MainLayout from "./Layouts/MainLayout";
 import Home from "./Pages/Home";
 import Pricing from "./Pages/Pricing";
 import Contact from "./Pages/Contact";
+import ClientResults from "./Pages/ClientResults";
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path="/client-results" element={<ClientResults />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
         </Route>

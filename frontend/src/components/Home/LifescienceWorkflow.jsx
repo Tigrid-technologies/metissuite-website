@@ -1,63 +1,31 @@
 import React, { useState } from "react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
+import { Bot, Check } from "lucide-react";
 import {
-  Search,
-  Mail,
-  CalendarCheck,
-  QrCode,
-  FileText,
-  Bot,
-  Check,
-} from "lucide-react";
+  workflowSectionData,
+  workflowSteps,
+} from "../../utils/workflowItems";
 
 const LifescienceWorkflow = () => {
-  const [hoveredIdx, setHoveredIdx] = useState(null);
+  // Step 01 is active by default to showcase the live research scan
+  const [activeStep, setActiveStep] = useState(0);
 
-  const bullets = [
-    "Prospect research across Google Scholar, LinkedIn and email",
-    "Meeting capture through QR codes and NFC tags",
-    "Human-reviewed content for technical audiences",
-    "Quote, purchasing and invoice follow-up in one rhythm",
-  ];
-
-  const steps = [
-    {
-      number: "01",
-      title: "Lead identified",
-      agent: "Research agent",
-      icon: Search,
-    },
-    {
-      number: "02",
-      title: "Message personalized",
-      agent: "Outreach agent",
-      icon: Mail,
-    },
-    {
-      number: "03",
-      title: "Meeting booked",
-      agent: "CRM + calendar",
-      icon: CalendarCheck,
-    },
-    {
-      number: "04",
-      title: "Follow-up captured",
-      agent: "QR / NFC suite",
-      icon: QrCode,
-    },
-    {
-      number: "05",
-      title: "Quote to invoice",
-      agent: "Books agent",
-      icon: FileText,
-    },
-  ];
+  const {
+    badgeNumber,
+    badgeLabel,
+    headingStart,
+    headingHighlight,
+    description,
+    bullets,
+    cardHeader,
+    cardFooter,
+  } = workflowSectionData;
 
   return (
     <section className="relative py-20 md:py-28 wrapper select-none">
       {/* 2-Column Balanced Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        {/* --- Left Column: Exact Content from metissuite.app --- */}
+        {/* --- Left Column: Value Prop & Bullets --- */}
         <motion.div
           initial={{ opacity: 0, x: -25 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -65,31 +33,28 @@ const LifescienceWorkflow = () => {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="lg:col-span-6 text-left space-y-6"
         >
-          {/* Pill Tag */}
+          {/* Section Pill */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold text-teal bg-teal/10 border border-teal/20 backdrop-blur-lg">
-            <span className="w-4 h-4 rounded-full border border-teal text-[10px] flex items-center justify-center font-mono">
-              03
+            <span className="w-4 h-4 rounded-full border border-teal text-[10px] flex items-center justify-center font-mono font-bold">
+              {badgeNumber}
             </span>
             <span className="tracking-wider uppercase text-[11px] font-bold">
-              LIFE-SCIENCE READY
+              {badgeLabel}
             </span>
           </div>
 
           {/* Main Headline */}
           <h2 className="text-4xl md:text-[52px] font-semibold tracking-tight text-ivory leading-[1.1]">
-            From scientific signal to commercial{" "}
-            <span className="text-teal font-light">follow-through.</span>
+            {headingStart}{" "}
+            <span className="text-teal font-light">{headingHighlight}</span>
           </h2>
 
-          {/* Subtitle Description */}
-          <p className="text-mist/75 text-[14.5px] md:text-[15px] leading-relaxed ">
-            Long sales cycles, technical buyers and conference-heavy growth
-            demand more than a generic automation stack. MetisSuiteAI helps
-            small and mid-sized biotech teams keep every important interaction
-            moving.
+          {/* Description */}
+          <p className="text-mist/75 text-[14.5px] md:text-[15px] leading-relaxed">
+            {description}
           </p>
 
-          {/* 4 Feature Bullets with Teal Checkmarks */}
+          {/* Feature Bullets with Teal Checkmarks */}
           <ul className="space-y-3 pt-2">
             {bullets.map((bullet, i) => (
               <li
@@ -105,7 +70,7 @@ const LifescienceWorkflow = () => {
           </ul>
         </motion.div>
 
-        {/* --- Right Column: The Clean, Compact Example Workflow Card --- */}
+        {/* --- Right Column: Interactive Example Workflow Card --- */}
         <motion.div
           initial={{ opacity: 0, x: 25, scale: 0.98 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
@@ -113,94 +78,123 @@ const LifescienceWorkflow = () => {
           transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="lg:col-span-6 flex justify-center"
         >
-          <div className="w-full max-w-[460px] rounded-[24px] border border-white/10 bg-gradient-to-b from-[#161a3f]/95 via-[#111435]/95 to-[#0b0e27]/98 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.55)] overflow-hidden text-left">
+          <div className="w-full max-w-[490px] rounded-[26px] border border-white/10 bg-gradient-to-b from-[#161a3f]/95 via-[#111435]/95 to-[#0b0e27]/98 backdrop-blur-2xl shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden text-left">
             {/* Top Bar */}
             <div className="flex items-center justify-between px-6 py-4 bg-[#121636]/90 border-b border-white/[0.08]">
               <span className="text-xs font-medium text-mist/90">
-                Example workflow
+                {cardHeader.title}
               </span>
               <span className="text-[11px] font-mono font-bold tracking-widest text-teal uppercase">
-                CONFERENCE LEAD → CUSTOMER
+                {cardHeader.subtitle}
               </span>
             </div>
 
-            {/* Timeline Steps Body */}
-            <div className="px-6 py-6">
-              {steps.map((step, idx) => {
+            {/* Workflow Steps Container */}
+            <div className="p-5 sm:p-6 space-y-2 relative">
+              {workflowSteps.map((step, idx) => {
                 const Icon = step.icon;
-                const isHovered = hoveredIdx === idx;
-                const isLast = idx === steps.length - 1;
+                const isActive = activeStep === idx;
+                const isLast = idx === workflowSteps.length - 1;
 
                 return (
                   <div
                     key={step.number}
-                    onMouseEnter={() => setHoveredIdx(idx)}
-                    onMouseLeave={() => setHoveredIdx(null)}
-                    className="flex items-start gap-4 group cursor-pointer"
+                    onClick={() => setActiveStep(idx)}
+                    className={`relative rounded-2xl transition-all duration-300 cursor-pointer ${
+                      isActive
+                        ? "border border-teal/40 bg-[#171d43]/60 p-3.5 sm:p-4 shadow-[0_0_20px_rgba(46,196,182,0.12)]"
+                        : "p-3 sm:p-3.5 hover:bg-white/[0.03] border border-transparent hover:border-white/5"
+                    }`}
                   >
-                    {/* Left Column: Icon + Vertical Connecting Line Segment */}
-                    <div className="flex flex-col items-center shrink-0">
-                      {/* Squircle Icon Badge */}
-                      <motion.div
-                        whileHover={{ scale: 1.08 }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 400,
-                          damping: 25,
-                        }}
-                        className={`w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 z-10 border ${
-                          isHovered
-                            ? "bg-teal/20 border-teal/50 text-teal shadow-[0_0_15px_rgba(46,196,182,0.4)]"
-                            : "bg-[#161b42] border-white/10 text-teal group-hover:border-teal/30"
-                        }`}
-                      >
-                        <Icon size={18} strokeWidth={2} />
-                      </motion.div>
-
-                      {/* Connecting Line Segment strictly between icons */}
-                      {!isLast && (
-                        <div className="w-[1.5px] h-7 bg-white/10 relative overflow-hidden my-1">
-                          {/* Flowing Laser Signal traveling down the line */}
-                          <motion.div
-                            animate={{ y: ["-100%", "200%"] }}
-                            transition={{
-                              duration: 1.8,
-                              repeat: Infinity,
-                              ease: "linear",
-                              delay: idx * 0.35,
-                            }}
-                            className="w-full h-full bg-gradient-to-b from-transparent via-teal to-transparent shadow-[0_0_6px_#2ec4b6]"
-                          />
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Right Column: Title, Subtitle, and Number */}
-                    <div className="flex-1 flex items-center justify-between pt-1.5 pb-2">
-                      <div>
-                        <h4
-                          className={`text-[14px] font-semibold transition-colors duration-200 ${
-                            isHovered
-                              ? "text-teal"
-                              : "text-ivory group-hover:text-white"
+                    <div className="flex items-start gap-3.5">
+                      {/* Left: Icon Squircle + Connecting Line Segment */}
+                      <div className="relative flex flex-col items-center shrink-0">
+                        <div
+                          className={`w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 z-10 transition-all duration-300 ${
+                            isActive
+                              ? "bg-[#181d45] border shadow-[0_0_15px_rgba(232,176,75,0.25)]"
+                              : "bg-[#161b42] border border-white/10 text-teal"
                           }`}
+                          style={{
+                            borderColor: isActive
+                              ? step.activeColor
+                              : "rgba(255,255,255,0.1)",
+                            color: isActive ? step.activeColor : "#2ec4b6",
+                          }}
                         >
-                          {step.title}
-                        </h4>
-                        <span className="text-[12px] text-mist/60 block mt-0.5 font-medium">
-                          {step.agent}
-                        </span>
+                          <Icon size={18} strokeWidth={2} />
+                        </div>
+
+                        {/* Continuous Connecting Line Segment to next icon */}
+                        {!isLast && (
+                          <div
+                            className={`w-[1.5px] absolute top-11 bottom-[-20px] left-1/2 -translate-x-1/2 bg-white/10 z-0 overflow-hidden ${
+                              isActive ? "bottom-[-92px]" : "bottom-[-16px]"
+                            }`}
+                          >
+                            <motion.div
+                              animate={{ y: ["-100%", "200%"] }}
+                              transition={{
+                                duration: 1.8,
+                                repeat: Infinity,
+                                ease: "linear",
+                                delay: idx * 0.35,
+                              }}
+                              className="w-full h-full bg-gradient-to-b from-transparent via-teal to-transparent shadow-[0_0_6px_#2ec4b6]"
+                            />
+                          </div>
+                        )}
                       </div>
 
-                      <span
-                        className={`text-xs font-mono font-medium transition-colors duration-200 ${
-                          isHovered
-                            ? "text-teal font-bold"
-                            : "text-mist/40 group-hover:text-mist/70"
-                        }`}
-                      >
-                        {step.number}
-                      </span>
+                      {/* Right: Step Title, Subtitle, and Number */}
+                      <div className="flex-1 min-w-0 pt-1">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h4
+                              className={`text-[14.5px] font-semibold transition-colors duration-200 ${
+                                isActive ? "text-ivory" : "text-ivory/90"
+                              }`}
+                            >
+                              {step.title}
+                            </h4>
+                            <span className="text-[12px] text-mist/60 block font-medium mt-0.5">
+                              {step.agent}
+                            </span>
+                          </div>
+
+                          <span
+                            className={`text-xs font-mono font-medium transition-colors duration-200 ${
+                              isActive
+                                ? "text-teal font-bold"
+                                : "text-mist/40"
+                            }`}
+                          >
+                            {step.number}
+                          </span>
+                        </div>
+
+                        {/* Expanded details sub-card when active */}
+                        <AnimatePresence>
+                          {isActive && (
+                            <motion.div
+                              initial={{ opacity: 0, height: 0, y: -6 }}
+                              animate={{ opacity: 1, height: "auto", y: 0 }}
+                              exit={{ opacity: 0, height: 0, y: -6 }}
+                              transition={{ duration: 0.25, ease: "easeOut" }}
+                              className="overflow-hidden"
+                            >
+                              <div className="mt-3.5 p-3 rounded-xl bg-[#0d122d]/90 border border-white/10 flex items-start gap-2.5 shadow-inner">
+                                <div className="w-4 h-4 rounded-full border border-teal/60 bg-teal/10 flex items-center justify-center text-teal shrink-0 mt-0.5">
+                                  <Check size={10} strokeWidth={3} />
+                                </div>
+                                <p className="text-[12.5px] text-mist/90 leading-relaxed">
+                                  {step.details}
+                                </p>
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
                     </div>
                   </div>
                 );
@@ -208,13 +202,22 @@ const LifescienceWorkflow = () => {
             </div>
 
             {/* Bottom Footer Bar */}
-            <div className="flex items-center gap-2.5 px-6 py-3.5 bg-[#121636]/80 border-t border-white/[0.08]">
-              <div className="w-6 h-6 rounded-lg bg-teal/15 border border-teal/30 flex items-center justify-center text-teal shrink-0">
-                <Bot size={14} strokeWidth={2} />
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-6 py-3.5 bg-[#121636]/90 border-t border-white/[0.08]">
+              <div className="flex items-center gap-2.5">
+                <div className="w-6 h-6 rounded-lg bg-teal/15 border border-teal/30 flex items-center justify-center text-teal shrink-0">
+                  <Bot size={14} strokeWidth={2} />
+                </div>
+                <span className="text-xs font-medium text-teal tracking-wide">
+                  {cardFooter.message}
+                </span>
               </div>
-              <span className="text-xs font-medium text-teal tracking-wide">
-                Metis coordinates context between every step.
-              </span>
+
+              <div className="flex items-center gap-2 pl-8 sm:pl-0">
+                <span className="w-2 h-2 rounded-full bg-teal shadow-[0_0_8px_#2ec4b6] animate-pulse" />
+                <span className="text-[11.5px] font-mono text-mist/70">
+                  {cardFooter.checkpoint}
+                </span>
+              </div>
             </div>
           </div>
         </motion.div>
