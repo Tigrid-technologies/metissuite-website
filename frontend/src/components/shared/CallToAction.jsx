@@ -7,7 +7,10 @@ import {
   useTransform,
 } from "motion/react";
 import { ArrowRight, Check, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 import { ctaContent, ctaVideoSources } from "../../utils/ctaItems";
+
+const MotionLink = motion.create(Link);
 
 // Shared Call-To-Action component using transparent alpha video
 const CallToAction = (props) => {
@@ -120,8 +123,8 @@ const CallToAction = (props) => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mt-8 flex flex-wrap items-center gap-3"
             >
-              <motion.a
-                href={c.primaryHref}
+              <MotionLink
+                to={c.primaryHref}
                 whileHover={{ scale: 1.03, y: -1 }}
                 whileTap={{ scale: 0.97 }}
                 className="group/btn relative overflow-hidden inline-flex items-center gap-2 rounded-full py-3 px-7 bg-teal text-midnight font-bold text-sm shadow-[0_0_24px_rgba(46,196,182,0.45)] hover:shadow-[0_0_34px_rgba(46,196,182,0.7)] transition-shadow"
@@ -139,17 +142,17 @@ const CallToAction = (props) => {
                   strokeWidth={2.2}
                   className="relative group-hover/btn:translate-x-1 transition-transform"
                 />
-              </motion.a>
+              </MotionLink>
 
               {c.secondaryLabel && (
-                <motion.a
-                  href={c.secondaryHref}
+                <MotionLink
+                  to={c.secondaryHref}
                   whileHover={{ scale: 1.03, y: -1 }}
                   whileTap={{ scale: 0.97 }}
                   className="inline-flex items-center gap-2 rounded-full py-3 px-7 border border-white/15 bg-white/5 hover:bg-white/10 hover:border-white/30 text-ivory font-semibold text-sm backdrop-blur transition-colors"
                 >
                   {c.secondaryLabel}
-                </motion.a>
+                </MotionLink>
               )}
             </motion.div>
 

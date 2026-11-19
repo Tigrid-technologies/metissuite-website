@@ -11,6 +11,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import RollingNumber from "../shared/RollingNumber";
+import { Link } from "react-router-dom";
 import { operatingLayerData } from "../../utils/operatingLayerItems";
 
 // Infinite Marquee Ticker Strip
@@ -172,14 +173,13 @@ const OperatingLayer = () => {
               </div>
 
               {/* Action Link */}
-              <motion.a
-                href={conductor.ctaHref}
-                whileHover={{ x: 4 }}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-teal hover:text-[#3de2d3] transition-colors pt-2"
+              <Link
+                to={conductor.ctaHref}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-teal hover:text-[#3de2d3] transition-colors pt-2 group"
               >
                 <span>{conductor.ctaLabel}</span>
-                <ArrowRight size={16} />
-              </motion.a>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
 
             {/* Right Column: 3 Metric Cards + Live Feed */}

@@ -4,15 +4,35 @@ import { navItems } from "../../utils/navItems";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Menu, X } from "lucide-react";
 
-const RollingLink = ({ href, children }) => {
+const MotionLink = motion.create(Link);
+
+const RollingLink = ({ href, children, isActive }) => {
+  if (isActive) {
+    return (
+      <Link
+        to={href}
+        className="font-secondary relative inline-block py-1 text-[14px] font-semibold text-teal"
+      >
+        <span>{children}</span>
+        {/* Active Underline Pill Indicator for Current Page Only */}
+        <motion.div
+          layoutId="activeNavIndicator"
+          className="absolute -bottom-0.5 inset-x-0 h-[2px] bg-teal rounded-full shadow-[0_0_8px_#2ec4b6]"
+          transition={{ type: "spring", stiffness: 380, damping: 30 }}
+        />
+      </Link>
+    );
+  }
+
   return (
-    <motion.a
-      href={href}
+    <MotionLink
+      to={href}
       initial="initial"
       whileHover="hover"
-      className="font-secondary relative inline-block py-1 text-[14px] font-semibold transition-colors duration-200"
+      className="font-secondary relative inline-block py-1 text-[14px] font-semibold text-white/90 hover:text-white transition-colors duration-200"
     >
       <div className="relative inline-flex overflow-hidden">
+        {/* Default White Layer */}
         <div className="flex">
           {children.split("").map((letter, i) => (
             <motion.span
@@ -22,9 +42,9 @@ const RollingLink = ({ href, children }) => {
                 hover: { y: "-125%" },
               }}
               transition={{
-                duration: 0.25,
+                duration: 0.22,
                 ease: [0.33, 1, 0.68, 1],
-                delay: 0.02 * i,
+                delay: 0.015 * i,
               }}
               className="inline-block"
             >
@@ -32,6 +52,7 @@ const RollingLink = ({ href, children }) => {
             </motion.span>
           ))}
         </div>
+        {/* Hover Teal Layer */}
         <div className="absolute inset-0 flex text-teal">
           {children.split("").map((letter, i) => (
             <motion.span
@@ -41,9 +62,9 @@ const RollingLink = ({ href, children }) => {
                 hover: { y: 0 },
               }}
               transition={{
-                duration: 0.25,
+                duration: 0.22,
                 ease: [0.33, 1, 0.68, 1],
-                delay: 0.02 * i,
+                delay: 0.015 * i,
               }}
               className="inline-block"
             >
@@ -52,7 +73,7 @@ const RollingLink = ({ href, children }) => {
           ))}
         </div>
       </div>
-    </motion.a>
+    </MotionLink>
   );
 };
 
@@ -98,7 +119,7 @@ const Header = () => {
             : "rgba(255,255,255,0)",
         }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        className="fixed top-0 inset-x-0 z-40 border-b"
+        className="fixed top-0 inset-x-0 z-40"
       >
         <div className="flex items-center justify-between py-4 md:py-5 wrapper">
           
@@ -113,7 +134,11 @@ const Header = () => {
             {/* Desktop Navigation Links */}
             <nav className="hidden lg:flex shrink-0 items-center gap-7 tracking-wide">
               {navItems.map((item) => (
-                <RollingLink key={item.title} href={item.href}>
+                <RollingLink
+                  key={item.title}
+                  href={item.href}
+                  isActive={location.pathname === item.href}
+                >
                   {item.title}
                 </RollingLink>
               ))}
@@ -138,10 +163,13 @@ const Header = () => {
             >
               Sign Up
             </a>
-            <button className="rounded-full flex gap-2 items-center py-2 px-6 bg-teal text-midnight font-bold shadow-[0_0_15px_rgba(46,196,182,0.4)] hover:shadow-[0_0_20px_rgba(46,196,182,0.6)] hover:bg-[#3de2d3] transition-all cursor-pointer">
+            <Link
+              to="/contact"
+              className="rounded-full flex gap-2 items-center py-2 px-6 bg-teal text-midnight font-bold shadow-[0_0_15px_rgba(46,196,182,0.4)] hover:shadow-[0_0_20px_rgba(46,196,182,0.6)] hover:bg-[#3de2d3] transition-all cursor-pointer"
+            >
               <span>Book a walkthrough</span>
               <ArrowRight size={16} strokeWidth={2} />
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Hamburger Toggle Button */}
@@ -213,26 +241,38 @@ const Header = () => {
 
                 {/* Staggered Navigation Items */}
                 <nav className="mt-8 flex flex-col space-y-2">
-                  {navItems.map((item, idx) => (
-                    <motion.a
-                      key={item.title}
-                      href={item.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{
-                        delay: 0.08 + idx * 0.05,
-                        duration: 0.3,
-                      }}
-                      className="flex items-center justify-between py-3 px-3.5 rounded-xl text-[15px] font-semibold text-mist hover:text-teal hover:bg-white/[0.04] transition-all group"
-                    >
-                      <span>{item.title}</span>
-                      <ArrowRight
-                        size={15}
-                        className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-teal"
-                      />
-                    </motion.a>
-                  ))}
+                  {navItems.map((item, idx) => {
+                    const isActive = location.pathname === item.href;
+
+                    return (
+                      <MotionLink
+                        key={item.title}
+                        to={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                          delay: 0.08 + idx * 0.05,
+                          duration: 0.3,
+                        }}
+                        className={`flex items-center justify-between py-3 px-3.5 rounded-xl text-[15px] font-semibold transition-all group ${
+                          isActive
+                            ? "text-teal bg-teal/10 border border-teal/20"
+                            : "text-mist hover:text-teal hover:bg-white/[0.04]"
+                        }`}
+                      >
+                        <span>{item.title}</span>
+                        <ArrowRight
+                          size={15}
+                          className={`transition-all text-teal ${
+                            isActive
+                              ? "opacity-100"
+                              : "opacity-0 group-hover:opacity-100 group-hover:translate-x-1"
+                          }`}
+                        />
+                      </MotionLink>
+                    );
+                  })}
                 </nav>
               </div>
 
@@ -263,13 +303,14 @@ const Header = () => {
                   </a>
                 </div>
 
-                <button
-                  type="button"
+                <Link
+                  to="/contact"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="w-full py-3 px-4 rounded-xl bg-teal text-midnight font-bold text-sm shadow-[0_0_15px_rgba(46,196,182,0.4)] hover:bg-[#3de2d3] flex items-center justify-center gap-2 transition-all cursor-pointer"
                 >
                   <span>Book a walkthrough</span>
                   <ArrowRight size={15} strokeWidth={2.2} />
-                </button>
+                </Link>
               </motion.div>
 
             </motion.div>

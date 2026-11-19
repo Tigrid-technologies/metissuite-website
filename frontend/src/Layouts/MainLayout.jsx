@@ -1,9 +1,13 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
-import { motion, useScroll, useTransform } from "motion/react";
+import { useLocation, useOutlet } from "react-router-dom";
+import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
 import Header from "../components/shared/Header";
 import Pattern from "../components/shared/Pattern";
+import ClipWipeCurtain from "../components/shared/ClipWipeCurtain";
+
 const MainLayout = () => {
+  const location = useLocation();
+  const outlet = useOutlet();
   const { scrollYProgress } = useScroll();
   const transform = useTransform(
     scrollYProgress,
@@ -30,15 +34,22 @@ const MainLayout = () => {
           backgroundColor: "#2ec4b6",
         }}
       />
-      {/* header */}
+
+      {/* Header */}
       <header>
         <Header />
       </header>
+
+      {/* Main Content with Curtain ClipWipe (zero flicker transition) */}
       <main className="flex-1 pt-21">
-        <Outlet />
+        <AnimatePresence mode="wait" initial={false}>
+          <ClipWipeCurtain key={location.pathname}>
+            {outlet}
+          </ClipWipeCurtain>
+        </AnimatePresence>
       </main>
+
       <footer className=""></footer>
-      {/* footer */}
     </div>
   );
 };

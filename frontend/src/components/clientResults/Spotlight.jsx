@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import RollingNumber from "../shared/RollingNumber";
+
+const MotionLink = motion.create(Link);
 import { Sparkles, ArrowUpRight } from "lucide-react";
 import {
   resultsSpotlight,
@@ -46,8 +49,8 @@ const Spotlight = () => {
             {resultsSpotlight.description}
           </motion.p>
 
-          <motion.a
-            href={resultsSpotlight.ctaHref}
+          <MotionLink
+            to={resultsSpotlight.ctaHref}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -56,7 +59,7 @@ const Spotlight = () => {
           >
             <span>{resultsSpotlight.ctaLabel}</span>
             <ArrowUpRight size={16} />
-          </motion.a>
+          </MotionLink>
       </div>
 
       {/* Results Glass Card */}
