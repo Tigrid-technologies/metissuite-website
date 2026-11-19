@@ -7,7 +7,7 @@ export const ctaContent = {
   description:
     "See how a unified GHL-powered operating suite and purpose-built AI agents can fit the way your biotech or life-science company works.",
   primaryLabel: "Request a private walkthrough",
-  primaryHref: "/contact",
+  primaryHref: "/book-walkthrough",
   secondaryLabel: "View pricing",
   secondaryHref: "/pricing",
   points: [

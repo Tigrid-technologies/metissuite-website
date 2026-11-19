@@ -19,10 +19,10 @@ const Home = () => {
           </span>
           <span>AI operations for biotech & life science</span>
         </div>
-        <h1 className="text-[40px] md:text-[54px] font-semibold tracking-tight leading-tight mt-5">
-          One intelligent <span className="text-teal font-light">suite</span>.
-          Your business,{" "}
-          <span className="text-teal font-light">in sync.</span>
+        <h1 className="text-[40px] md:text-[64px]  tracking-tight leading-tight mt-5 max-w-[70%] mx-auto">
+          One intelligent <span className="text-teal font-medium">suite</span>.
+          Every part of your business,{" "}
+          <span className="text-teal font-medium">playing in time.</span>
         </h1>
         <p className="w-[90%] md:w-[75%] mx-auto mt-4 text-mist/80 text-[15px] leading-relaxed">
           MetisSuiteAI brings your CRM, marketing, invoicing, purchasing,

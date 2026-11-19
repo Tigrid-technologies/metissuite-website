@@ -164,7 +164,7 @@ const Header = () => {
               Sign Up
             </a>
             <Link
-              to="/contact"
+              to="/book-walkthrough"
               className="rounded-full flex gap-2 items-center py-2 px-6 bg-teal text-midnight font-bold shadow-[0_0_15px_rgba(46,196,182,0.4)] hover:shadow-[0_0_20px_rgba(46,196,182,0.6)] hover:bg-[#3de2d3] transition-all cursor-pointer"
             >
               <span>Book a walkthrough</span>
@@ -304,7 +304,7 @@ const Header = () => {
                 </div>
 
                 <Link
-                  to="/contact"
+                  to="/book-walkthrough"
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full py-3 px-4 rounded-xl bg-teal text-midnight font-bold text-sm shadow-[0_0_15px_rgba(46,196,182,0.4)] hover:bg-[#3de2d3] flex items-center justify-center gap-2 transition-all cursor-pointer"
                 >
