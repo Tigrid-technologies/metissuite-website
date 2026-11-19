@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { AnimatePresence } from "motion/react";
 import Header from "./components/shared/Header";
+import Footer from "./components/shared/Footer";
 import Pattern from "./components/shared/Pattern";
 import Home from "./Pages/Home";
 import Pricing from "./Pages/Pricing";
@@ -53,6 +54,9 @@ const App = () => {
         <main className="flex-1 pt-21">
           <AnimatedPages />
         </main>
+
+        {/* Global Modern Footer */}
+        <Footer />
       </div>
     </Router>
   );
