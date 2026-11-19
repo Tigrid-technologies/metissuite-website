@@ -9,6 +9,10 @@ import { AnimatePresence } from "motion/react";
 import Header from "./components/shared/Header";
 import Footer from "./components/shared/Footer";
 import Pattern from "./components/shared/Pattern";
+import {
+  TopScrollIndicator,
+  FloatingScrollToTop,
+} from "./components/shared/ScrollProgress";
 import Home from "./Pages/Home";
 import Pricing from "./Pages/Pricing";
 import Contact from "./Pages/Contact";
@@ -44,6 +48,12 @@ const App = () => {
   return (
     <Router>
       <div className="relative flex flex-col min-h-screen bg-midnight">
+        {/* Top-of-page animated gradient scroll progress bar */}
+        <TopScrollIndicator />
+
+        {/* Floating circular scroll-to-top button */}
+        <FloatingScrollToTop />
+
         {/* Background ambient grid pattern */}
         <Pattern />
 
