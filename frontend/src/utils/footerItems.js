@@ -12,6 +12,14 @@ export const footerData = {
     },
     contactEmail: "hello@metissuiteai.app",
   },
+  agentTelemetry: [
+    { name: "Conductor", status: "Active", latency: "42ms", role: "Master Router", color: "#e8b04b" },
+    { name: "Scribe", status: "Ready", latency: "98.6% approval", role: "Bio Copywriting", color: "#2ec4b6" },
+    { name: "Scout", status: "Active", latency: "PubMed live", role: "Literature Scanner", color: "#38bdf8" },
+    { name: "Prospector", status: "Active", latency: "14 ICPs found", role: "Pipeline Sourcing", color: "#10b981" },
+    { name: "Ledger", status: "Standby", latency: "0 pending POs", role: "Invoice Audit", color: "#f59e0b" },
+    { name: "Dispatch", status: "Active", latency: "0 lag queue", role: "Calendar & Sched", color: "#a855f7" },
+  ],
   navigationGroups: [
     {
       title: "Platform",
