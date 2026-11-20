@@ -2,8 +2,8 @@ export const plans = [
   {
     id: 1,
     name: "Starter",
-    priceMonth: 40,
-    priceYear: 400,
+    priceMonth: 47,
+    priceYear: 470,
     description: "Never miss a lead again",
     features: [
       "AI call & text answering",
@@ -16,8 +16,8 @@ export const plans = [
   {
     id: 2,
     name: "Pro",
-    priceMonth: 70,
-    priceYear: 800,
+    priceMonth: 97,
+    priceYear: 970,
     description: "Everything you need to grow",
     features: [
       "AI call & text answering",
@@ -34,8 +34,8 @@ export const plans = [
   {
     id: 3,
     name: "Advanced",
-    priceMonth: 150,
-    priceYear: 1600,
+    priceMonth: 297,
+    priceYear: 2970,
     description: "Complete business intelligence",
     features: [
       "AI call & text answering",
