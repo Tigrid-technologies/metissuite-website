@@ -21,7 +21,7 @@ const Home = () => {
         </div>
         <h1 className="text-[40px] md:text-[64px]  tracking-tight leading-tight mt-5 max-w-[70%] mx-auto">
           One intelligent <span className="text-teal font-medium">suite</span>.
-          Every part of your business,{" "}
+          <span className="border-b-5">Every part of your business</span>,{" "}
           <span className="text-teal font-medium">playing in time.</span>
         </h1>
         <p className="w-[90%] md:w-[75%] mx-auto mt-4 text-mist/80 text-[15px] leading-relaxed">
