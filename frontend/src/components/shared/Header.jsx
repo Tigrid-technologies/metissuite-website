@@ -122,13 +122,14 @@ const Header = () => {
         className="fixed top-0 inset-x-0 z-40"
       >
         <div className="flex items-center justify-between py-4 md:py-5 wrapper">
-          
           {/* Logo & Desktop Nav */}
           <div className="flex items-center gap-8">
             <Link to="/" className="logo text-[20px] select-none shrink-0">
               <span className="font-bold text-ivory">Metis</span>
               <span className="font-light text-ivory">Suite</span>
-              <span className="font-semibold text-[12px] text-gold ml-1">AI</span>
+              <span className="font-semibold text-[12px] text-gold ml-1">
+                AI
+              </span>
             </Link>
 
             {/* Desktop Navigation Links */}
@@ -148,7 +149,7 @@ const Header = () => {
           {/* Desktop Right Actions */}
           <div className="hidden lg:flex items-center gap-5 text-[14px]">
             <a
-              href="https://app.metissuiteai.app/login"
+              href="https://metissuite.tigrid.in/login"
               target="_blank"
               rel="noreferrer"
               className="text-mist hover:text-white transition-colors font-medium"
@@ -156,7 +157,7 @@ const Header = () => {
               Sign In
             </a>
             <a
-              href="https://app.metissuiteai.app/signup"
+              href="https://metissuite.tigrid.in/signup"
               target="_blank"
               rel="noreferrer"
               className="text-mist hover:text-white transition-colors font-medium"
@@ -183,7 +184,6 @@ const Header = () => {
               <Menu size={22} />
             </button>
           </div>
-
         </div>
       </motion.header>
 
@@ -225,7 +225,9 @@ const Header = () => {
                   >
                     <span className="font-bold text-ivory">Metis</span>
                     <span className="font-light text-ivory">Suite</span>
-                    <span className="font-semibold text-[12px] text-gold ml-1">AI</span>
+                    <span className="font-semibold text-[12px] text-gold ml-1">
+                      AI
+                    </span>
                   </Link>
 
                   <motion.button
@@ -312,7 +314,6 @@ const Header = () => {
                   <ArrowRight size={15} strokeWidth={2.2} />
                 </Link>
               </motion.div>
-
             </motion.div>
           </>
         )}
