@@ -111,7 +111,7 @@ const Spotlight = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-4 text-mist/80 text-[17.5px] max-w-xl mx-auto"
         >
-          Transparent pricing designed to scale effortlessly with your team as your AI agents conduct routine work.
+          Transparent pricing designed for lean biotech and life-science teams to scale effortlessly as AI agents handle routine work.
         </motion.p>
 
         {/* --- Billing Cycle Toggle (Monthly / Yearly) --- */}

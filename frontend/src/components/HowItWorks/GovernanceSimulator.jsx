@@ -72,9 +72,14 @@ const GovernanceSimulator = () => {
                     {tier.tier}
                   </h3>
 
-                  <p className="text-xs text-mist/80 leading-relaxed mb-4">
-                    {tier.rule}
-                  </p>
+                  <ul className="space-y-1.5 text-xs text-mist/85 leading-relaxed mb-4">
+                    {tier.rules.map((r, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: tier.color }} />
+                        <span>{r}</span>
+                      </li>
+                    ))}
+                  </ul>
 
                   <div className="space-y-1.5 pt-3 border-t border-white/[0.06]">
                     <span className="text-[13px] font-bold uppercase tracking-wider text-mist/50 block">
@@ -133,22 +138,22 @@ const GovernanceSimulator = () => {
                     </span>
                   </div>
                   <p className="text-xs sm:text-sm text-mist/80">
-                    Scribe generated this message referencing Dr. Rostova's keynote on mRNA assays at BIO 2026. Review and release with one click:
+                    Metis Outreach drafted this follow-up from your MeetLoop™ conference capture. Review and approve with one click:
                   </p>
                 </div>
 
                 {/* Draft Preview Box */}
                 <div className="rounded-2xl bg-[#0a0d22] border border-white/10 p-5 font-mono text-xs text-mist/90 space-y-3">
                   <div className="text-teal/90 pb-2 border-b border-white/[0.06] flex items-center justify-between">
-                    <span>TO: e.rostova@cambridgebiopharma.com</span>
-                    <span className="text-[13.5px] text-mist/50">SUBJ: Scaling mRNA Assays — BIO 2026 Follow-up</span>
+                    <span>TO: e.vance@helixbio.com</span>
+                    <span className="text-[13.5px] text-mist/50">SUBJ: Assay Scale-Up — Conference Follow-up</span>
                   </div>
                   <p className="leading-relaxed text-ivory/90">
-                    "Dr. Rostova, thank you for stopping by our booth yesterday. We reviewed Cambridge BioPharma's recent patent filing on microfluidic mRNA encapsulation—our automated QC conductor can monitor assay tolerances with 0 human bottlenecks. Would Tuesday at 10:00 AM work for a 15-minute technical demo?"
+                    "Dr. Vance, great connecting at the booth today. Based on your team's focus on assay scale-up, I've attached our technical overview and a link to schedule a 15-minute walkthrough."
                   </p>
                   <div className="pt-2 text-[13.5px] text-mist/50 flex items-center justify-between border-t border-white/[0.06]">
-                    <span>Agent: Scribe v2.4 (Confidence: 98.6%)</span>
-                    <span className="text-teal">Context Match: 100%</span>
+                    <span>Agent: Metis Outreach</span>
+                    <span className="text-teal">Human Checkpoint Gate</span>
                   </div>
                 </div>
 

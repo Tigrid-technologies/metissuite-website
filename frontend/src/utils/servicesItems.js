@@ -1,27 +1,46 @@
 export const servicesSpotlight = {
-  badge: "Modular Operating Capabilities",
-  headingStart: "Six dedicated services.",
+  badge: "Life Sciences Operating Modules",
+  headingStart: "Six connected services.",
   headingHighlight: "One unified operating rhythm.",
   rollingWords: [
     "operating rhythm.",
     "pipeline velocity.",
-    "governance standard.",
+    "human control.",
     "commercial cadence.",
   ],
-  description:
-    "Explore how MetisSuite replaces fragmented software with purpose-built services for biotech, pharma, and high-tempo life-science teams—all managed by specialized AI agents with human-in-the-loop control.",
+  bullets: [
+    "Replace disconnected CRM, outreach, invoicing, and purchasing tools.",
+    "Purpose-built for lean biotech and life-science teams.",
+    "Every module shares context and respects your human approval gates.",
+  ],
   stats: [
-    { value: "6", label: "Core service modules", sub: "Deploy together or modularly" },
-    { value: "3.4x", label: "Meeting conversion velocity", sub: "From initial conference tap to call" },
-    { value: "70%", label: "Reduction in admin routines", sub: "Zero manual data re-entry" },
-    { value: "100%", label: "Human approval checkpoints", sub: "Safe for high-stakes bio deals" },
+    {
+      value: "6",
+      label: "Core Metis modules",
+      sub: "Deploy together or start with what you need",
+    },
+    {
+      value: "24/7",
+      label: "Voice & lead coverage",
+      sub: "Never miss an inbound call or conference lead",
+    },
+    {
+      value: "1",
+      label: "Unified workspace",
+      sub: "CRM, marketing, billing & purchasing connected",
+    },
+    {
+      value: "100%",
+      label: "Human-in-the-loop",
+      sub: "Approval gates before external actions",
+    },
   ],
   categories: [
     { id: "all", label: "All Services" },
-    { id: "growth", label: "Commercial & CRM" },
+    { id: "growth", label: "CRM & Voice" },
     { id: "physical", label: "MeetLoop™ & Events" },
-    { id: "finance", label: "Invoicing & Purchasing" },
-    { id: "research", label: "R&D & Intelligence" },
+    { id: "research", label: "Research & Outreach" },
+    { id: "finance", label: "Books & Procure" },
   ],
 };
 
@@ -29,152 +48,170 @@ export const servicesList = [
   {
     id: "crm-pipeline",
     category: "growth",
-    title: "CRM & Pipeline Automation",
-    subtitle: "High-touch biotech commercial operating system",
+    title: "CRM & Unified Pipeline",
+    subtitle: "Context-aware pipeline for long-cycle life-science deals",
     accent: "#2ec4b6",
-    badge: "Core Operating Engine",
+    badge: "Core Operating Layer",
     icon: "Database",
     summary:
-      "A context-aware CRM designed specifically for long-cycle scientific partnerships, CDMO contracts, and life-science investors.",
-    description:
-      "Unlike generic CRMs that require hours of manual field updates, Metis CRM auto-enriches contact cards with PubMed papers, clinical development stages, and therapeutic targets. Every conversation, meeting note, and email thread updates automatically without manual logging.",
+      "Keep contacts, conversations, and deal stages organized in one shared workspace.",
+    bullets: [
+      "Unified inbox combining email, SMS, and call history per contact.",
+      "Clear pipeline stages tailored for technical buyers and long sales cycles.",
+      "Automatic activity updates from every Metis agent—no manual data entry.",
+    ],
     keyCapabilities: [
-      "Auto-enrichment with clinical trials and funding history",
-      "Bi-directional two-way synchronization with HubSpot, Salesforce & GHL",
-      "Pipeline stage velocity tracking & deal stagnation alerts",
-      "Multi-stakeholder relationship mapping across research institutions",
+      "Contacts & pipeline management in one view",
+      "Unified email, SMS, and call conversation thread",
+      "Online booking & calendar coordination",
+      "Shared context across all 6 Metis agents",
     ],
     interactiveMetric: {
-      label: "Average weekly time saved per commercial rep",
-      value: "9.2 hours",
+      label: "Manual CRM logging required",
+      value: "Zero",
     },
     sampleUseCase:
-      "Automatically updates a \$450,000 CDMO pipeline deal when a prospect's IND application is approved by the FDA.",
+      "Every call, conference tap, and email reply updates the deal timeline automatically.",
   },
   {
     id: "meetloop-events",
     category: "physical",
-    title: "MeetLoop™ Smart Event Capture",
-    subtitle: "Turn scientific summit conversations into qualified pipeline",
+    title: "MeetLoop™ Event Capture",
+    subtitle: "Turn conference conversations into immediate pipeline",
     accent: "#e8b04b",
     badge: "Physical-to-Digital",
     icon: "Smartphone",
     summary:
-      "Smart NFC badges and dynamic QR profiles that capture in-person context instantly at BIO, ASCO, JP Morgan, and AACR.",
-    description:
-      "At scientific conferences, collecting paper business cards leads to delayed follow-ups and lost context. MeetLoop lets prospects tap your physical card or badge to exchange notes, record voice memos, and automatically trigger tailored follow-ups before the conference day concludes.",
+      "Smart NFC cards and dynamic QR badges that capture in-person context at life-science summits.",
+    bullets: [
+      "Prospects tap your NFC card or scan QR—no app download needed.",
+      "Record quick voice memos or booth notes right after each conversation.",
+      "Automatically syncs contact + notes to CRM and drafts your follow-up.",
+    ],
     keyCapabilities: [
-      "Custom branded NFC smart cards and dynamic QR web badges",
-      "On-device contact exchange with zero app installation required",
-      "Instant context transcription (booth notes, spoken scientific questions)",
-      "Automated personalized email sequence drafts ready for human approval",
+      "Custom NFC smart cards and dynamic QR profiles",
+      "Voice-note transcription attached to each contact",
+      "Instant CRM capture at BIO, ASCO, and industry events",
+      "Approval-gated follow-up drafts ready before you leave the floor",
     ],
     interactiveMetric: {
-      label: "Follow-up speed after scientific summits",
-      value: "Under 4 hours",
+      label: "Post-conference follow-up",
+      value: "Same Day",
     },
     sampleUseCase:
-      "A researcher taps your badge at Booth #302. By evening, a personalized draft citing their specific assay challenge is ready on your phone.",
+      "Tap badges at your booth, record a 10-second voice note, and approve the drafted follow-up from your phone.",
   },
   {
-    id: "ai-invoicing-purchasing",
-    category: "finance",
-    title: "AI Invoicing & Lab Purchasing",
-    subtitle: "Automated vendor procurement and invoice reconciliation",
-    accent: "#f59e0b",
-    badge: "Financial Control",
-    icon: "Receipt",
-    summary:
-      "Streamlines reagent purchases, equipment maintenance contracts, supplier invoices, and client billing cycles.",
-    description:
-      "Lab operations and procurement teams spend dozens of hours reconciling PDF invoices against negotiated vendor discount sheets. Metis Ledger uses OCR line-item extraction to audit prices, detect supplier overcharges, and route approval requests with 1-click verification.",
-    keyCapabilities: [
-      "OCR parsing for supplier PDF invoices, packing slips, and POs",
-      "Automatic price verification against contracted vendor discount tiers",
-      "Dual-human signoff routing for capital expenditures over set thresholds",
-      "Direct ledger synchronization with QuickBooks, Xero, and enterprise ERPs",
-    ],
-    interactiveMetric: {
-      label: "Average invoice discrepancy detection rate",
-      value: "14.2%",
-    },
-    sampleUseCase:
-      "Flags an unapplied 15% academic discount on a \$28,000 antibody order before payment is issued.",
-  },
-  {
-    id: "scientific-intelligence",
-    category: "research",
-    title: "Scientific Intelligence & Outreach",
-    subtitle: "PubMed, clinical trial, and patent monitoring to pipeline",
-    accent: "#38bdf8",
-    badge: "R&D & Market Intel",
-    icon: "Compass",
-    summary:
-      "Autonomous literature crawling and context extraction that keeps your team ahead of competitive scientific discoveries.",
-    description:
-      "Scout continuously monitors PubMed, bioRxiv, clinicaltrials.gov, and patent databases for keywords, targets, and researchers in your domain. It distills complex scientific milestones into actionable commercial briefs and personalized outreach angles.",
-    keyCapabilities: [
-      "Automated daily screening of 4,000+ scientific journals and pre-prints",
-      "Therapeutic target and biomarker competitive intelligence alerts",
-      "Scientific outreach generation referencing specific publications and assays",
-      "Strict retrieval-augmented generation (RAG) limited to verified sources",
-    ],
-    interactiveMetric: {
-      label: "Scientific literature screened per day",
-      value: "4,000+ papers",
-    },
-    sampleUseCase:
-      "Scans new Phase II oncology pre-prints and alerts commercial leadership when an existing prospect announces positive biomarker results.",
-  },
-  {
-    id: "meeting-dispatch",
+    id: "metis-voice",
     category: "growth",
-    title: "Meeting Intelligence & Dispatch",
-    subtitle: "24/7 calendar coordination, call notes, and action routing",
+    title: "Metis Voice & Booking",
+    subtitle: "24/7 AI call answering, qualification & missed-call follow-up",
     accent: "#a855f7",
-    badge: "Execution & Scheduling",
+    badge: "Calls & Scheduling",
     icon: "Zap",
     summary:
-      "Round-the-clock lead triage, calendar scheduling across international bio hubs, and post-call action routing.",
-    description:
-      "Eliminate back-and-forth scheduling across timezones. Dispatch coordinates meetings in real time, converts Zoom/Teams call recordings into structured biological summary notes, and delegates post-meeting action items to the appropriate team members.",
+      "Answer every inbound call, qualify prospects, and book meetings around the clock.",
+    bullets: [
+      "Answers inbound calls 24/7 with natural, on-brand responses.",
+      "Qualifies callers and captures project needs directly into your CRM.",
+      "Sends instant missed-call text-backs and books calendar slots.",
+    ],
     keyCapabilities: [
-      "Timezone-intelligent calendar scheduling with zero email ping-pong",
-      "Call transcript summarization highlighting technical constraints and budget",
-      "Automated CRM deal stage progression and follow-up task assignment",
-      "Multi-channel communications via Email, WhatsApp, and SMS",
+      "24/7 inbound call answering and routing",
+      "Automated missed-call SMS follow-up",
+      "Direct online appointment booking",
+      "Full call summaries logged to the contact record",
     ],
     interactiveMetric: {
-      label: "Zero-lag scheduling across global timezones",
-      value: "< 30 seconds",
+      label: "Inbound call coverage",
+      value: "24/7 Live",
     },
     sampleUseCase:
-      "Converts a 45-minute technical call into a 3-bullet executive summary and auto-schedules the follow-up demo with an NDA link attached.",
+      "A prospect calls after hours, gets their questions answered, and books a discovery call for the next morning.",
   },
   {
-    id: "governance-checkpoints",
-    category: "growth",
-    title: "Governance & Human Checkpoint Suite",
-    subtitle: "Immutable audit ledger and customizable review gates",
-    accent: "#10b981",
-    badge: "Safety & Compliance",
-    icon: "ShieldCheck",
+    id: "metis-research",
+    category: "research",
+    title: "Metis Research",
+    subtitle: "Targeted life-science lead lists across Scholar, LinkedIn & email",
+    accent: "#38bdf8",
+    badge: "Lead Generation",
+    icon: "Compass",
     summary:
-      "Ensures life-science companies get maximum AI leverage without ever risking unauthorized communications or erroneous payments.",
-    description:
-      "The foundation of the entire MetisSuite platform. Every autonomous agent operates behind deterministic governance gates. You set the rules for what executes autonomously (data tagging) and what mandates 1-click human verification (outbound emails, PO approvals).",
+      "Build focused prospect lists for biotech and life-science markets without manual searching.",
+    bullets: [
+      "Researches relevant decision-makers across email, LinkedIn, and Google Scholar.",
+      "Matches prospects to your ideal therapeutic focus or buyer profile.",
+      "Enriches contact cards with publication and background context.",
+    ],
     keyCapabilities: [
-      "Customizable 3-tier risk governance matrix (Autonomous, Supervised, Restricted)",
-      "1-click verification cards delivered directly to desktop and mobile",
-      "Cryptographically verified audit trail for every agent action and approval",
-      "Full HIPAA BAA, SOC-2 Type II, and GDPR compliance architecture",
+      "Google Scholar, LinkedIn, and email prospect discovery",
+      "Life-science and biotech ICP targeting",
+      "Automated profile enrichment before outreach",
+      "Direct sync into CRM outreach pipelines",
     ],
     interactiveMetric: {
-      label: "Compliance guarantee on external actions",
-      value: "100%",
+      label: "Research channels unified",
+      value: "Scholar + Web",
     },
     sampleUseCase:
-      "Pauses a high-value \$60,000 vendor agreement and delivers a side-by-side diff card to the VP of Operations before any signature.",
+      "Builds a targeted list of oncology researchers and lab directors ready for Metis Outreach.",
+  },
+  {
+    id: "metis-outreach-social",
+    category: "research",
+    title: "Metis Outreach & Social",
+    subtitle: "Email/SMS sequences and brand-voice content engine",
+    accent: "#f43f5e",
+    badge: "Growth & Content",
+    icon: "ShieldCheck",
+    summary:
+      "Run precise nurture sequences and publish consistent content in your voice—with human approval.",
+    bullets: [
+      "Runs email and SMS nurture, reactivation, and outbound sequences.",
+      "Plans, writes, and schedules social content tailored to your brand voice.",
+      "Keeps human-in-the-loop approval before campaigns or posts go live.",
+    ],
+    keyCapabilities: [
+      "Multi-step email & SMS nurture and win-back campaigns",
+      "Brand-voice social content planning and drafting",
+      "Automatic pause when a prospect replies",
+      "1-click human approval before sending or publishing",
+    ],
+    interactiveMetric: {
+      label: "Outbound control",
+      value: "1-Click Gate",
+    },
+    sampleUseCase:
+      "Drafts a 3-step conference nurture sequence and a LinkedIn recap post, both ready for your sign-off.",
+  },
+  {
+    id: "metis-books-procure",
+    category: "finance",
+    title: "Metis Books & Procure",
+    subtitle: "AI invoicing, purchasing workflows & approval tracking",
+    accent: "#f59e0b",
+    badge: "Invoicing & Purchasing",
+    icon: "Receipt",
+    summary:
+      "Prepare invoices, coordinate purchase requests, and keep financial follow-ups on time.",
+    bullets: [
+      "Prepares estimates and client invoices directly from pipeline activity.",
+      "Coordinates internal purchase requests and vendor PO approval steps.",
+      "Tracks payment follow-ups and delivery milestones in one place.",
+    ],
+    keyCapabilities: [
+      "AI-prepared estimates and invoices",
+      "Structured purchase request & PO approvals",
+      "Delivery milestone and vendor follow-up tracking",
+      "Human sign-off required before issuing payments or invoices",
+    ],
+    interactiveMetric: {
+      label: "Financial oversight",
+      value: "100% Gated",
+    },
+    sampleUseCase:
+      "Tracks a lab supply purchase through approval and prepares the client milestone invoice automatically.",
   },
 ];
 
@@ -187,62 +224,63 @@ export const roiCalculatorDefaults = {
 
 export const comparisonPoints = [
   {
-    feature: "Conference & In-Person Follow-up",
-    metis: "Instant MeetLoop NFC tap -> automated bio context -> draft sent in < 4 hours",
-    traditional: "Manual business cards collected -> entered days later -> generic email template",
+    feature: "Conference & Event Follow-up",
+    metis: "MeetLoop™ NFC tap -> context captured -> follow-up drafted same day",
+    traditional: "Paper business cards entered days later with generic templates",
   },
   {
-    feature: "Scientific Context & Research",
-    metis: "Real-time PubMed & clinical trial enrichment with verified citations",
-    traditional: "Manual Google Scholar searches before every meeting",
+    feature: "Life-Science Lead Research",
+    metis: "Metis Research builds lists across Google Scholar, LinkedIn & email",
+    traditional: "Manual searching across disconnected tabs before every call",
   },
   {
-    feature: "Vendor Invoicing & Reagent POs",
-    metis: "Automated OCR extraction, contract discount auditing & 1-click approval",
-    traditional: "Manual line-by-line spreadsheet cross-checking by lab manager",
+    feature: "Inbound Calls & Booking",
+    metis: "24/7 Metis Voice answers, qualifies, and books onto your calendar",
+    traditional: "Missed calls, voicemail tag, and slow back-and-forth scheduling",
   },
   {
-    feature: "CRM Data Hygiene",
-    metis: "Autonomous multi-agent syncing with zero manual data entry required",
-    traditional: "Fragmented notes, outdated deal stages, forgotten follow-ups",
+    feature: "Invoicing & Purchasing",
+    metis: "Metis Books & Procure prepare invoices, track POs & route approvals",
+    traditional: "Scattered spreadsheets and manual payment follow-ups",
   },
   {
-    feature: "Governance & Risk Control",
-    metis: "Deterministic Human Checkpoint gates with immutable SHA-256 audit ledger",
-    traditional: "Either uncontrolled AI hallucination risk or purely manual work",
+    feature: "Human Oversight",
+    metis: "Clear approval gates before outbound sends, posts, or payouts",
+    traditional: "Either unreviewed automation risk or 100% manual work",
   },
 ];
 
 export const servicesFaqs = [
   {
     id: 1,
-    question: "Can we subscribe to individual service modules or do we need the full suite?",
-    answer:
-      "MetisSuite is modular by design. While our clients experience maximum synergy when the full suite operates together, you can deploy individual modules—such as MeetLoop for an upcoming conference or AI Invoicing for lab operations—and expand over time.",
+    question: "Can we start with specific modules or do we need everything at once?",
+    answerBullets: [
+      "You can start with the capabilities you need most—such as MeetLoop™, Metis Voice, or CRM & Outreach.",
+      "All modules share the same operating layer, so adding more later works seamlessly.",
+    ],
   },
   {
     id: 2,
-    question: "How does Metis CRM integrate with our existing HubSpot or Salesforce instance?",
-    answer:
-      "MetisSuite acts as an operating layer directly connected via native bi-directional webhooks and APIs. You do not need to migrate or abandon your current CRM; Metis agents read context from your existing records and write updates directly back into them in real time.",
+    question: "What is included with MeetLoop™?",
+    answerBullets: [
+      "Physical NFC smart cards and dynamic QR profiles linked to your CRM.",
+      "Instant contact capture, voice-note transcription, and drafted follow-ups.",
+    ],
   },
   {
     id: 3,
-    question: "What physical hardware is included with MeetLoop™?",
-    answer:
-      "MeetLoop includes custom laser-engraved NFC metal or bamboo cards, smart attendee lanyards for conferences, and dynamic QR badges linked to your team's personalized digital profiles.",
+    question: "How does human-in-the-loop approval work across services?",
+    answerBullets: [
+      "Agents prepare drafts, prospect lists, invoices, and purchase orders.",
+      "Your team reviews and approves with one click before anything goes external.",
+    ],
   },
   {
     id: 4,
-    question: "How long does onboarding and custom calibration take for our biotech workflows?",
-    answer:
-      "Our systems engineers typically complete full onboarding within 3 to 5 business days. This includes mapping your existing pipelines, calibrating the scientific terminology guardrails, and testing human checkpoint routes.",
-  },
-  {
-    id: 5,
-    question: "Is our scientific IP and customer data secure?",
-    answer:
-      "Yes. We support single-tenant VPC deployments, end-to-end AES-256 encryption, HIPAA compliance agreements (BAA), and zero-training guarantees on external LLMs.",
+    question: "Who is MetisSuite built for?",
+    answerBullets: [
+      "Lean teams in biotech and life sciences handling technical buyers, long sales cycles, and industry conferences.",
+      "Teams looking to replace 5+ disconnected tools with one AI-managed operating suite.",
+    ],
   },
 ];
-

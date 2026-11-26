@@ -328,17 +328,22 @@ const Ensemble = () => {
           <span className="text-teal font-light">One Team.</span>
         </motion.h2>
 
-        <motion.p
+        <motion.ul
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-4 text-mist/85 text-[17.5px] md:text-[18.5px] max-w-2xl mx-auto leading-relaxed"
+          className="mt-5 text-mist/85 text-[17px] md:text-[18px] max-w-2xl mx-auto leading-relaxed space-y-2 text-left"
         >
-          Each Metis agent owns a business routine. Together, they share
-          context and keep the next step moving seamlessly under your
-          human-in-the-loop control.
-        </motion.p>
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+            <span>Each Metis agent owns a dedicated life-science business routine.</span>
+          </li>
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+            <span>Shared context keeps every next step moving under your human-in-the-loop control.</span>
+          </li>
+        </motion.ul>
       </div>
 
       {/* --- Interactive Bento Grid --- */}

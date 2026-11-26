@@ -70,7 +70,7 @@ const HowItWorksSpotlight = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-base sm:text-lg text-mist/90 max-w-2xl mx-auto leading-relaxed"
           >
-            {howItWorksSpotlight.description}
+            MetisSuiteAI consolidates CRM, outreach, invoicing, purchasing, content, and lead generation in one place—coordinated by 6 specialized agents with human approval gates on every external action.
           </motion.p>
 
           {/* Quick anchor pills to navigate the detailed architecture */}

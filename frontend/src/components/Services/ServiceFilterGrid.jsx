@@ -49,8 +49,8 @@ const ServiceDomainWidget = ({ serviceId, accent }) => {
           </div>
 
           <div className="flex items-center justify-between text-[13.5px] text-mist/80">
-            <span className="text-ivory font-medium truncate">Dr. Elena Rostova</span>
-            <span className="text-teal font-bold font-secondary">$450k CDMO</span>
+            <span className="text-ivory font-medium truncate">HelixBio Therapeutics</span>
+            <span className="text-teal font-bold font-secondary">Active Deal</span>
           </div>
 
           {/* Stepper Progress */}
@@ -77,7 +77,7 @@ const ServiceDomainWidget = ({ serviceId, accent }) => {
               <span className="text-ivory font-semibold">NFC Signal Stream</span>
             </div>
             <span className="text-[13px] text-gold font-bold px-2 py-0.5 rounded-full bg-gold/10 border border-gold/20">
-              BIO 2026 Summit
+              Life-Science Summit
             </span>
           </div>
 
@@ -86,113 +86,113 @@ const ServiceDomainWidget = ({ serviceId, accent }) => {
               <Smartphone size={16} />
             </div>
             <div className="text-[13.5px] leading-tight">
-              <span className="text-ivory block font-semibold">Booth #302 Touchpoint</span>
-              <span className="text-mist/60 text-[13px]">Follow-up drafted in 3.8s</span>
+              <span className="text-ivory block font-semibold">Booth Contact Captured</span>
+              <span className="text-mist/60 text-[13px]">Voice memo transcribed</span>
             </div>
           </div>
 
           <div className="py-1 px-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06] text-[13px] text-gold flex items-center justify-between">
-            <span>Context: mRNA assay notes</span>
+            <span>Follow-up drafted</span>
             <span className="text-teal">Ready for Review</span>
           </div>
         </div>
       );
 
-    case "ai-invoicing-purchasing":
+    case "metis-voice":
       return (
         <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[13.5px] shadow-inner">
           <div className="flex items-center justify-between pb-2 border-b border-white/[0.06]">
-            <span className="text-ivory font-semibold">Invoice #INV-8910</span>
-            <span className="text-[13px] text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/20">
-              OCR Audited
-            </span>
-          </div>
-
-          <div className="flex items-center justify-between text-[13.5px]">
-            <span className="text-mist/70">Antibody Batch (x12):</span>
-            <span className="text-ivory line-through text-mist/50">$28,000.00</span>
-          </div>
-
-          <div className="py-1 px-2.5 rounded-lg bg-amber-400/10 border border-amber-400/30 text-[13px] text-amber-300 flex items-center justify-between font-semibold">
-            <span>✓ 15% Contract Discount</span>
-            <span>Net: $23,800.00</span>
-          </div>
-        </div>
-      );
-
-    case "scientific-intelligence":
-      return (
-        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[13.5px] shadow-inner">
-          <div className="flex items-center justify-between pb-2 border-b border-white/[0.06]">
-            <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-[#38bdf8] animate-pulse" />
-              <span className="text-ivory font-semibold">PubMed Monitor</span>
-            </div>
-            <span className="text-[13px] text-[#38bdf8] font-bold px-2 py-0.5 rounded-full bg-[#38bdf8]/10 border border-[#38bdf8]/20">
-              Daily Crawl 06:00
-            </span>
-          </div>
-
-          <div className="text-[13.5px] text-ivory/90 truncate">
-            "Target Biomarkers in mRNA Delivery"
-          </div>
-
-          <div className="flex items-center justify-between text-[13px] text-mist/60 pt-1 border-t border-white/[0.06]">
-            <span>Verified Source: Nature Bio</span>
-            <span className="text-[#38bdf8] font-bold">99.2% Match</span>
-          </div>
-        </div>
-      );
-
-    case "meeting-dispatch":
-      return (
-        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[13.5px] shadow-inner">
-          <div className="flex items-center justify-between pb-2 border-b border-white/[0.06]">
-            <span className="text-ivory font-semibold">Calendar Dispatch</span>
+            <span className="text-ivory font-semibold">Metis Voice 24/7</span>
             <span className="text-[13px] text-[#a855f7] font-bold px-2 py-0.5 rounded-full bg-[#a855f7]/10 border border-[#a855f7]/20">
-              Active Call
+              Call Answered
             </span>
           </div>
 
           <div className="flex items-center justify-between text-[13.5px]">
-            <span className="text-ivory truncate">30-Min Technical Demo</span>
+            <span className="text-ivory truncate">Discovery Call Booked</span>
             <span className="text-[#a855f7] font-bold">10:00 AM</span>
           </div>
 
           <div className="py-1 px-2 rounded-lg bg-white/[0.03] text-[13px] text-mist/80 flex items-center gap-1.5">
             <CheckCircle2 size={12} className="text-[#a855f7]" />
-            <span>Audio transcribed • 3 action items routed</span>
+            <span>Lead qualified • Missed-call SMS active</span>
           </div>
         </div>
       );
 
-    case "governance-checkpoints":
+    case "metis-research":
       return (
         <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[13.5px] shadow-inner">
           <div className="flex items-center justify-between pb-2 border-b border-white/[0.06]">
-            <span className="text-ivory font-semibold">Human Checkpoint</span>
-            <span className="text-[13px] text-emerald-400 font-bold px-2 py-0.5 rounded-full bg-emerald-400/10 border border-emerald-400/20">
-              Tier 2 Supervised
+            <div className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-[#38bdf8] animate-pulse" />
+              <span className="text-ivory font-semibold">Prospect List</span>
+            </div>
+            <span className="text-[13px] text-[#38bdf8] font-bold px-2 py-0.5 rounded-full bg-[#38bdf8]/10 border border-[#38bdf8]/20">
+              Google Scholar
+            </span>
+          </div>
+
+          <div className="text-[13.5px] text-ivory/90 truncate">
+            Oncology & Biomarker Leads
+          </div>
+
+          <div className="flex items-center justify-between text-[13px] text-mist/60 pt-1 border-t border-white/[0.06]">
+            <span>Sources: Scholar, LinkedIn</span>
+            <span className="text-[#38bdf8] font-bold">Synced to CRM</span>
+          </div>
+        </div>
+      );
+
+    case "metis-outreach-social":
+      return (
+        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[13.5px] shadow-inner">
+          <div className="flex items-center justify-between pb-2 border-b border-white/[0.06]">
+            <span className="text-ivory font-semibold">Outreach & Social</span>
+            <span className="text-[13px] text-[#f43f5e] font-bold px-2 py-0.5 rounded-full bg-[#f43f5e]/10 border border-[#f43f5e]/20">
+              Approval Gate
             </span>
           </div>
 
           <div className="flex items-center justify-between text-[13px] text-mist/80">
-            <span>External Email Release:</span>
+            <span>Nurture & Post Queue:</span>
             <button
               type="button"
               onClick={() => setDemoApproved(!demoApproved)}
               className={`px-2 py-1 rounded text-[13px] font-bold transition-all cursor-pointer ${
                 demoApproved
                   ? "bg-emerald-400 text-midnight shadow-[0_0_10px_rgba(52,211,153,0.4)]"
-                  : "bg-emerald-400/20 text-emerald-300 border border-emerald-400/40 hover:bg-emerald-400/30"
+                  : "bg-[#f43f5e]/20 text-[#f43f5e] border border-[#f43f5e]/40 hover:bg-[#f43f5e]/30"
               }`}
             >
-              {demoApproved ? "✓ Approved & Signed" : "1-Click Verify"}
+              {demoApproved ? "✓ Approved" : "1-Click Approve"}
             </button>
           </div>
 
           <div className="text-[12px] text-mist/50 truncate">
-            Audit Hash: SHA-256:7f4a...Verified
+            Email + SMS + Brand-Voice Content
+          </div>
+        </div>
+      );
+
+    case "metis-books-procure":
+      return (
+        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[13.5px] shadow-inner">
+          <div className="flex items-center justify-between pb-2 border-b border-white/[0.06]">
+            <span className="text-ivory font-semibold">Books & Procure</span>
+            <span className="text-[13px] text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/20">
+              Approval Tracked
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between text-[13.5px]">
+            <span className="text-mist/70">PO & Invoice Status:</span>
+            <span className="text-ivory font-semibold">Prepared</span>
+          </div>
+
+          <div className="py-1 px-2.5 rounded-lg bg-amber-400/10 border border-amber-400/30 text-[13px] text-amber-300 flex items-center justify-between font-semibold">
+            <span>✓ Delivery & Billing Synced</span>
+            <span>On Schedule</span>
           </div>
         </div>
       );
@@ -315,10 +315,18 @@ const ServiceFilterGrid = ({ activeCategory }) => {
                       />
                     </div>
 
-                    {/* Description Paragraph */}
-                    <p className="text-xs sm:text-sm text-mist/85 leading-relaxed mb-5">
-                      {service.summary}
-                    </p>
+                    {/* Bullet Summary */}
+                    <ul className="space-y-1.5 text-xs sm:text-sm text-mist/85 leading-relaxed mb-5">
+                      {service.bullets.map((bullet, bIdx) => (
+                        <li key={bIdx} className="flex items-start gap-2">
+                          <span
+                            className="mt-2 w-1.5 h-1.5 rounded-full shrink-0"
+                            style={{ backgroundColor: service.accent }}
+                          />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
 
                     {/* Clean Single-Row Metric Strip (No Awkward Wrapping) */}
                     <div className="mb-5 p-3 rounded-2xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-between text-xs">

@@ -13,9 +13,9 @@ import {
 import { interactiveScenarios } from "../../utils/howItWorksItems";
 
 const categoryIcons = {
-  "Commercial & Business Development": Building2,
-  "Lab Operations & Procurement": Microscope,
-  "R&D & Market Intelligence": FileText,
+  "Events & Commercial": Building2,
+  "Voice & Pipeline": Microscope,
+  "Operations & Finance": FileText,
 };
 
 const BiotechScenarios = () => {
@@ -136,12 +136,17 @@ const BiotechScenarios = () => {
             <div className="rounded-2xl bg-gradient-to-r from-teal/15 via-[#192248] to-gold/10 border border-teal/30 p-5 flex items-start gap-3.5">
               <CheckCircle2 size={20} className="text-teal shrink-0 mt-0.5" />
               <div>
-                <strong className="text-sm font-bold text-ivory block mb-0.5">
-                  Measured Commercial Outcome:
+                <strong className="text-sm font-bold text-ivory block mb-1.5">
+                  Measured Outcome:
                 </strong>
-                <p className="text-xs sm:text-sm text-mist/90 leading-relaxed">
-                  {currentScenario.outcome}
-                </p>
+                <ul className="space-y-1 text-xs sm:text-sm text-mist/90 leading-relaxed">
+                  {currentScenario.outcomes.map((out, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+                      <span>{out}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </motion.div>

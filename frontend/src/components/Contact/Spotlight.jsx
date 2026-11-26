@@ -219,8 +219,7 @@ const Spotlight = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-4 text-mist/80 text-[17.5px] max-w-xl mx-auto"
         >
-          Have questions or want to see MetisSuiteAI in action? Fill out the
-          form below and our specialized team will get in touch.
+          Have questions or want to see MetisSuiteAI in action for your biotech or life-science team? Fill out the form below and our team will get in touch.
         </motion.p>
       </div>
 

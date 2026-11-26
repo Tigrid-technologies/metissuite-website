@@ -107,8 +107,15 @@ const HowItWorksFaq = () => {
                     transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="px-5 sm:px-7 pb-5 pt-1 text-xs sm:text-sm text-mist/85 leading-relaxed border-t border-white/[0.05]">
-                      {item.answer}
+                    <div className="px-5 sm:px-7 pb-5 pt-2 text-xs sm:text-sm text-mist/85 leading-relaxed border-t border-white/[0.05]">
+                      <ul className="space-y-1.5">
+                        {item.answerBullets.map((b, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <span className="mt-2 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </motion.div>
                 )}

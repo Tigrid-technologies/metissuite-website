@@ -12,6 +12,11 @@ import {
   ArrowRight,
   Sparkles,
   CheckCircle,
+  PhoneCall,
+  Mail,
+  Search,
+  Share2,
+  ShoppingCart,
 } from "lucide-react";
 import { agentDeepDives } from "../../utils/howItWorksItems";
 
@@ -22,6 +27,11 @@ const iconMap = {
   Target,
   Receipt,
   Zap,
+  PhoneCall,
+  Mail,
+  Search,
+  Share2,
+  ShoppingCart,
 };
 
 const AgentOrchestrationDeck = () => {
@@ -161,9 +171,17 @@ const AgentOrchestrationDeck = () => {
                   <h4 className="text-xs font-bold uppercase tracking-wider text-mist/60 mb-2">
                     Operational Scope & Purpose:
                   </h4>
-                  <p className="text-sm sm:text-base text-mist/90 leading-relaxed">
-                    {activeAgent.overview}
-                  </p>
+                  <ul className="space-y-2 text-sm sm:text-base text-mist/90 leading-relaxed">
+                    {activeAgent.overviewBullets.map((bullet, i) => (
+                      <li key={i} className="flex items-start gap-2.5">
+                        <span
+                          className="mt-2 w-1.5 h-1.5 rounded-full shrink-0"
+                          style={{ backgroundColor: activeAgent.accent }}
+                        />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* Example Routine Card */}

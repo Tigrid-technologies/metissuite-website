@@ -26,8 +26,8 @@ const Home = () => {
         </h1>
         <p className="w-[90%] md:w-[78%] mx-auto mt-5 text-mist/85 text-[18px] md:text-[20px] leading-relaxed">
           MetisSuiteAI brings your CRM, marketing, invoicing, purchasing,
-          content and lead generation into one place - with specialized AI
-          agents conducting the routine work.
+          content and lead generation into one place—with specialized AI
+          agents conducting routine life-science operations under your control.
         </p>
 
         {/* Hero Dashboard UI Card */}

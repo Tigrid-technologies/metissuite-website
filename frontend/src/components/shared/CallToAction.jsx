@@ -106,15 +106,22 @@ const CallToAction = (props) => {
               <span className="font-light text-teal">{c.headingHighlight}</span>
             </motion.h2>
 
-            <motion.p
+            <motion.ul
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-4 text-mist/75 text-[17.5px] leading-relaxed max-w-lg"
+              className="mt-5 text-mist/85 text-[17px] leading-relaxed max-w-lg space-y-2"
             >
-              {c.description}
-            </motion.p>
+              <li className="flex items-start gap-2.5">
+                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+                <span>Unified AI operating suite tailored for biotech and life-science teams.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+                <span>Human-in-the-loop approvals on every outbound message and financial step.</span>
+              </li>
+            </motion.ul>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}

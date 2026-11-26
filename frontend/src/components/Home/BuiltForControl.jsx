@@ -243,16 +243,23 @@ const BuiltForControl = () => {
           </h2>
         </motion.div>
 
-        {/* Right Column: Narrative Description */}
-        <motion.div
+        {/* Right Column: Bullet Highlights */}
+        <motion.ul
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="lg:col-span-5 text-mist/80 text-[17.5px] md:text-[18.5px] leading-relaxed"
+          className="lg:col-span-5 text-mist/85 text-[17px] md:text-[18px] leading-relaxed space-y-2.5"
         >
-          <p>{description}</p>
-        </motion.div>
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+            <span>{description}</span>
+          </li>
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+            <span>Tailored for life-science teams requiring strict oversight on external communications and spend.</span>
+          </li>
+        </motion.ul>
       </div>
 
       {/* --- 3 Distinct Interactive Pillars Grid --- */}

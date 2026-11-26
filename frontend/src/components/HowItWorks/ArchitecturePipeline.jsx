@@ -114,9 +114,14 @@ const ArchitecturePipeline = () => {
                   </p>
                 </div>
 
-                <p className="text-sm sm:text-base text-mist/85 leading-relaxed">
-                  {currentStage.description}
-                </p>
+                <ul className="space-y-2.5 text-sm sm:text-base text-mist/90 leading-relaxed">
+                  {currentStage.bullets.map((bullet, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
 
                 {/* Inbound Inputs List */}
                 <div>

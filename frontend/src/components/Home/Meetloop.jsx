@@ -316,16 +316,23 @@ const Meetloop = () => {
             </span>
           </motion.h2>
 
-          {/* Subtitle */}
-          <motion.p
+          {/* Bullet Highlights */}
+          <motion.ul
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-mist/80 text-[17.5px] md:text-[18.5px] leading-relaxed max-w-xl"
+            className="space-y-2 text-mist/85 text-[17px] md:text-[18px] leading-relaxed max-w-xl"
           >
-            {header.description}
-          </motion.p>
+            <li className="flex items-start gap-2.5">
+              <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+              <span>{header.description}</span>
+            </li>
+            <li className="flex items-start gap-2.5">
+              <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+              <span>Built for life-science summits—zero lost business cards or delayed follow-ups.</span>
+            </li>
+          </motion.ul>
 
           {/* 3 Interactive Feature Rows */}
           <div className="space-y-3 pt-2">

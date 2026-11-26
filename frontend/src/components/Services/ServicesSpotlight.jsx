@@ -57,7 +57,7 @@ const ServicesSpotlight = ({ activeCategory, onSelectCategory }) => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-base sm:text-lg text-mist/90 max-w-2xl mx-auto leading-relaxed"
           >
-            {servicesSpotlight.description}
+            Replace disconnected CRM, outreach, invoicing, and purchasing tools with connected modules purpose-built for lean biotech and life-science teams—all under human-in-the-loop control.
           </motion.p>
 
           {/* Category Filter Pills */}
