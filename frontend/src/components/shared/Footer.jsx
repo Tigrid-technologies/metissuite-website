@@ -440,17 +440,6 @@ const Footer = () => {
                   className="group-hover:translate-x-0.5 transition-transform"
                 />
               </Link>
-
-              <div className="rounded-xl bg-white/[0.02] border border-white/[0.06] p-3 text-[13.5px] text-mist/70 space-y-1">
-                <div className="flex items-center gap-1.5 text-teal font-semibold">
-                  <Shield size={12} />
-                  <span>Enterprise Security</span>
-                </div>
-                <p className="leading-relaxed">
-                  Single-tenant VPC isolation, AES-256 encryption & HIPAA BAA
-                  compliance.
-                </p>
-              </div>
             </div>
           </div>
         </div>

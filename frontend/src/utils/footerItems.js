@@ -46,7 +46,7 @@ export const footerData = {
       links: [
         { label: "Privacy Policy", href: "/privacy", external: false },
         { label: "Terms & Conditions", href: "/terms", external: false },
-        { label: "Security & HIPAA BAA", href: "/how-it-works#governance-section", external: false },
+        // { label: "Security & HIPAA BAA", href: "/how-it-works#governance-section", external: false },
         { label: "Client Sign In", href: "https://app.metissuiteai.app/login", external: true },
         { label: "Create Account", href: "https://app.metissuiteai.app/signup", external: true },
       ],

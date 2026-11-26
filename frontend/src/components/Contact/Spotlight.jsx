@@ -229,7 +229,7 @@ const Spotlight = () => {
         initial={{ opacity: 0, y: 35, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-        className="relative w-full max-w-2xl mx-auto mt-10 md:mt-12 text-left"
+        className="relative w-full max-w-6xl mx-auto mt-10 md:mt-12 text-left"
       >
         {/* Ambient subtle glow behind card */}
         <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-b from-teal/15 via-transparent to-indigo/20 blur-xl pointer-events-none" />
