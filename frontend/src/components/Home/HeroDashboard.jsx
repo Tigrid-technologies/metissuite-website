@@ -23,7 +23,7 @@ const HeroDashboard = () => {
       initial={{ opacity: 0, y: 35, scale: 0.97 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-      className="relative w-full max-w-[850px] mx-auto mt-10 md:mt-12 text-left"
+      className="relative w-full max-w-6xl mx-auto mt-10 md:mt-12 text-left"
     >
 
       {/* Main Glass Card Frame */}
