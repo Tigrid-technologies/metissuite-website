@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence, useMotionValue, useTransform } from "motion/react";
+import { LottieLight as Lottie } from "lottie-react";
+import nfcLoadingAnimation from "../../../public/assets/elements/nfc loading.json";
 import {
   QrCode,
   UserCheck,
@@ -117,26 +119,21 @@ const MobilePhoneMockup = ({ activeFeature, setActiveFeature }) => {
                   </span>
                 </div>
 
-                {/* Glowing NFC / QR Radar Icon */}
+                {/* Glowing NFC Loading Lottie Animation (Replacing static QR icon) */}
                 <motion.div
-                  whileHover={{ scale: 1.06 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.96 }}
                   onClick={() => setScreenState(1)}
-                  className="relative cursor-pointer group"
+                  className="relative cursor-pointer group flex items-center justify-center"
+                  title="Tap to Connect"
                 >
-                  <div className="absolute -inset-2 rounded-full bg-teal/20 blur-xl group-hover:bg-teal/35 transition-all" />
-                  <div className="relative w-28 h-28 rounded-full bg-gradient-to-b from-[#1a234f] to-[#12173b] border-2 border-teal/40 flex items-center justify-center text-teal shadow-[0_0_25px_rgba(46,196,182,0.3)]">
-                    <QrCode size={46} strokeWidth={1.8} />
-
-                    {/* Scanning Beam traveling across QR */}
-                    <motion.div
-                      animate={{ y: [-30, 30, -30] }}
-                      transition={{
-                        repeat: Infinity,
-                        duration: 2.2,
-                        ease: "easeInOut",
-                      }}
-                      className="absolute inset-x-3 h-[2px] bg-gradient-to-r from-transparent via-teal to-transparent shadow-[0_0_8px_#2ec4b6]"
+                  <div className="absolute -inset-3 rounded-full bg-teal/25 blur-xl group-hover:bg-teal/40 transition-all duration-300" />
+                  <div className="relative w-42 h-42 rounded-full bg-gradient-to-b from-[#1a234f] to-[#12173b] border-2 border-teal/40 flex items-center justify-center shadow-[0_0_25px_rgba(46,196,182,0.35)] group-hover:border-teal/70 group-hover:shadow-[0_0_35px_rgba(46,196,182,0.5)] transition-all overflow-hidden p-1">
+                    <Lottie
+                      src={nfcLoadingAnimation}
+                      loop={true}
+                      autoplay={true}
+                      className="w-full h-full object-contain pointer-events-none scale-110"
                     />
                   </div>
                 </motion.div>
