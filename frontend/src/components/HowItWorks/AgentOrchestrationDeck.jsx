@@ -45,8 +45,8 @@ const AgentOrchestrationDeck = () => {
           </p>
         </div>
 
-        {/* 6 Agent Tabs Horizontal Bar */}
-        <div className="flex items-center justify-start sm:justify-center gap-2.5 overflow-x-auto pb-4 mb-10 no-scrollbar">
+        {/* 6 Agent Tabs Bar */}
+        <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 pb-2 mb-10">
           {agentDeepDives.map((agent) => {
             const Icon = iconMap[agent.icon] || Cpu;
             const isSelected = selectedAgentId === agent.id;
@@ -58,7 +58,7 @@ const AgentOrchestrationDeck = () => {
                 onClick={() => setSelectedAgentId(agent.id)}
                 className={`flex items-center gap-2.5 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-200 shrink-0 cursor-pointer ${
                   isSelected
-                    ? "bg-white/10 border-2 text-ivory shadow-[0_0_20px_rgba(46,196,182,0.2)] scale-[1.03]"
+                    ? "bg-white/10 border-2 text-ivory shadow-[0_0_20px_rgba(46,196,182,0.2)]"
                     : "bg-white/[0.03] border border-white/10 text-mist/70 hover:text-white hover:bg-white/[0.06]"
                 }`}
                 style={{
@@ -97,13 +97,13 @@ const AgentOrchestrationDeck = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -25 }}
             transition={{ duration: 0.35 }}
-            className="max-w-5xl mx-auto rounded-3xl bg-gradient-to-b from-[#181d45] via-[#121636] to-[#0c0f28] border border-white/15 p-6 sm:p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl"
+            className="max-w-6xl mx-auto rounded-3xl bg-gradient-to-b from-[#181d45] via-[#121636] to-[#0c0f28] border border-white/15 p-6 sm:p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl"
           >
             {/* Header: Agent Identity & Live Telemetry */}
-            <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-white/[0.08] gap-4">
-              <div className="flex items-center gap-4">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between pb-6 border-b border-white/[0.08] gap-5">
+              <div className="flex items-center gap-4 min-w-0">
                 <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg"
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg shrink-0"
                   style={{
                     backgroundColor: `${activeAgent.accent}20`,
                     border: `1px solid ${activeAgent.accent}50`,
@@ -113,13 +113,13 @@ const AgentOrchestrationDeck = () => {
                   {React.createElement(iconMap[activeAgent.icon] || Cpu, { size: 28 })}
                 </div>
 
-                <div>
-                  <div className="flex items-center gap-2">
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-center gap-2">
                     <h3 className="text-2xl sm:text-3xl font-bold text-ivory tracking-tight">
                       {activeAgent.name}
                     </h3>
                     <span
-                      className="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider"
+                      className="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider shrink-0"
                       style={{
                         backgroundColor: `${activeAgent.accent}20`,
                         color: activeAgent.accent,
@@ -136,7 +136,7 @@ const AgentOrchestrationDeck = () => {
               </div>
 
               {/* Live Metric Pills */}
-              <div className="flex items-center gap-3 self-start md:self-auto">
+              <div className="flex flex-wrap items-center gap-3 self-start lg:self-auto shrink-0">
                 {Object.entries(activeAgent.liveMetrics).map(([key, value]) => (
                   <div
                     key={key}

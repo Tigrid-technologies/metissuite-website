@@ -256,38 +256,39 @@ const Spotlight = () => {
 
                 {/* --- Features List (Key Highlights) --- */}
                 <div className="mt-6">
-                  <p className="text-[13.5px] font-bold uppercase tracking-wider text-mist/60 mb-3.5">
-                    Key Features:
-                  </p>
-                  <ul className="space-y-3">
-                    {plan.features.slice(0, 5).map((feature, fIdx) => (
-                      <li
-                        key={fIdx}
-                        className="flex items-start gap-2.5 text-[15.5px] text-ivory/85 leading-tight"
-                      >
-                        <div
-                          className={`mt-0.5 rounded-full p-0.5 shrink-0 ${
-                            isFeatured
-                              ? "bg-teal/20 text-teal"
-                              : "bg-white/10 text-teal"
-                          }`}
-                        >
-                          <Check size={13} strokeWidth={2.5} />
-                        </div>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {(() => {
+                    const prevPlan = index > 0 ? plans[index - 1] : null;
+                    const displayFeatures = prevPlan
+                      ? plan.features.filter((f) => !prevPlan.features.includes(f))
+                      : plan.features;
 
-                  {plan.features.length > 5 && (
-                    <a
-                      href="#compare"
-                      className="inline-flex items-center gap-1 mt-4 text-[14.5px] font-medium text-teal/80 hover:text-teal transition-colors"
-                    >
-                      <span>+ {plan.features.length - 5} more features</span>
-                      <span className="text-[13px]">↓</span>
-                    </a>
-                  )}
+                    return (
+                      <>
+                        <p className="text-[13.5px] font-bold uppercase tracking-wider text-mist/60 mb-3.5">
+                          {prevPlan ? `All features in ${prevPlan.name} +` : "Key Features:"}
+                        </p>
+                        <ul className="space-y-3">
+                          {displayFeatures.map((feature, fIdx) => (
+                            <li
+                              key={fIdx}
+                              className="flex items-start gap-2.5 text-[15.5px] text-ivory/85 leading-tight"
+                            >
+                              <div
+                                className={`mt-0.5 rounded-full p-0.5 shrink-0 ${
+                                  isFeatured
+                                    ? "bg-teal/20 text-teal"
+                                    : "bg-white/10 text-teal"
+                                }`}
+                              >
+                                <Check size={13} strokeWidth={2.5} />
+                              </div>
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    );
+                  })()}
                 </div>
               </div>
 
