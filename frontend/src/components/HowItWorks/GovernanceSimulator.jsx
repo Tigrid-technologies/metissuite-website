@@ -36,7 +36,7 @@ const GovernanceSimulator = () => {
         </div>
 
         {/* 3 Governance Tiers Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-7xl mx-auto">
           {governanceTiers.map((tier, idx) => {
             const isSelected = activeTierIndex === idx;
 
@@ -77,7 +77,7 @@ const GovernanceSimulator = () => {
                   </p>
 
                   <div className="space-y-1.5 pt-3 border-t border-white/[0.06]">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-mist/50 block">
+                    <span className="text-[13px] font-bold uppercase tracking-wider text-mist/50 block">
                       Routine Examples:
                     </span>
                     {tier.actionTypes.map((action, i) => (
@@ -141,12 +141,12 @@ const GovernanceSimulator = () => {
                 <div className="rounded-2xl bg-[#0a0d22] border border-white/10 p-5 font-mono text-xs text-mist/90 space-y-3">
                   <div className="text-teal/90 pb-2 border-b border-white/[0.06] flex items-center justify-between">
                     <span>TO: e.rostova@cambridgebiopharma.com</span>
-                    <span className="text-[11px] text-mist/50">SUBJ: Scaling mRNA Assays — BIO 2026 Follow-up</span>
+                    <span className="text-[13.5px] text-mist/50">SUBJ: Scaling mRNA Assays — BIO 2026 Follow-up</span>
                   </div>
                   <p className="leading-relaxed text-ivory/90">
                     "Dr. Rostova, thank you for stopping by our booth yesterday. We reviewed Cambridge BioPharma's recent patent filing on microfluidic mRNA encapsulation—our automated QC conductor can monitor assay tolerances with 0 human bottlenecks. Would Tuesday at 10:00 AM work for a 15-minute technical demo?"
                   </p>
-                  <div className="pt-2 text-[11px] text-mist/50 flex items-center justify-between border-t border-white/[0.06]">
+                  <div className="pt-2 text-[13.5px] text-mist/50 flex items-center justify-between border-t border-white/[0.06]">
                     <span>Agent: Scribe v2.4 (Confidence: 98.6%)</span>
                     <span className="text-teal">Context Match: 100%</span>
                   </div>

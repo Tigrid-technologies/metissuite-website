@@ -13,9 +13,9 @@ const Home = () => {
     <div className="relative z-10 min-h-screen flex flex-col items-center justify-center pt-8 pb-24">
       {/* Hero Section */}
       <div className="wrapper text-center w-full max-w-4xl mx-auto">
-        <div className="inline-flex justify-center gap-2 items-center px-5 py-1 rounded-full text-[13px] text-gold border border-gold/20 bg-gold/10 backdrop-blur-lg">
+        <div className="inline-flex justify-center gap-2 items-center px-5 py-1.5 rounded-full text-[15px] text-gold border border-gold/20 bg-gold/10 backdrop-blur-lg">
           <span>
-            <BrainCircuit size={18} strokeWidth={1.5} />
+            <BrainCircuit size={19} strokeWidth={1.5} />
           </span>
           <span>AI operations for biotech & life science</span>
         </div>
@@ -24,7 +24,7 @@ const Home = () => {
           <span className="border-b-5">Every part of your business</span>,{" "}
           <span className="text-teal font-medium">playing in time.</span>
         </h1>
-        <p className="w-[90%] md:w-[75%] mx-auto mt-4 text-mist/80 text-[15px] leading-relaxed">
+        <p className="w-[90%] md:w-[78%] mx-auto mt-5 text-mist/85 text-[18px] md:text-[20px] leading-relaxed">
           MetisSuiteAI brings your CRM, marketing, invoicing, purchasing,
           content and lead generation into one place - with specialized AI
           agents conducting the routine work.

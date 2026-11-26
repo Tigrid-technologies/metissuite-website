@@ -64,7 +64,7 @@ const FloatingInput = ({
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           required={required}
-          className="w-full bg-transparent pt-5 pb-2 pr-4 text-[14px] text-ivory placeholder-transparent focus:outline-none"
+          className="w-full bg-transparent pt-5 pb-2 pr-4 text-[16.5px] text-ivory placeholder-transparent focus:outline-none"
         />
 
         {/* Floating Label (Slides to Top-Left on active/focused) */}
@@ -76,7 +76,7 @@ const FloatingInput = ({
             color: isFocused ? "#2ec4b6" : isActive ? "#c9cce0" : "#c9cce080",
           }}
           transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-          className="absolute left-10 pointer-events-none origin-top-left font-medium text-[13.5px] select-none"
+          className="absolute left-10 pointer-events-none origin-top-left font-medium text-[16px] select-none"
         >
           {label} {required && <span className="text-teal font-bold">*</span>}
         </motion.label>
@@ -139,7 +139,7 @@ const FloatingTextarea = ({
             onBlur={() => setIsFocused(false)}
             required={required}
             rows={rows}
-            className="w-full bg-transparent pt-6 pb-3 pr-4 text-[14px] text-ivory placeholder-transparent focus:outline-none resize-none leading-relaxed"
+            className="w-full bg-transparent pt-6 pb-3 pr-4 text-[16.5px] text-ivory placeholder-transparent focus:outline-none resize-none leading-relaxed"
           />
         </div>
 
@@ -152,7 +152,7 @@ const FloatingTextarea = ({
             color: isFocused ? "#2ec4b6" : isActive ? "#c9cce0" : "#c9cce080",
           }}
           transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-          className="absolute left-10 top-2 pointer-events-none origin-top-left font-medium text-[13.5px] select-none"
+          className="absolute left-10 top-2 pointer-events-none origin-top-left font-medium text-[16px] select-none"
         >
           {label} {required && <span className="text-teal font-bold">*</span>}
         </motion.label>
@@ -195,7 +195,7 @@ const Spotlight = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex justify-center gap-2 items-center px-5 py-1 rounded-full text-[13px] text-gold border border-gold/20 bg-gold/10 backdrop-blur-lg mb-4"
+          className="inline-flex justify-center gap-2 items-center px-5 py-1 rounded-full text-[15.5px] text-gold border border-gold/20 bg-gold/10 backdrop-blur-lg mb-4"
         >
           <Sparkles size={16} strokeWidth={1.8} />
           <span>Let's advance life science together</span>
@@ -217,7 +217,7 @@ const Spotlight = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-4 text-mist/80 text-[15px] max-w-xl mx-auto"
+          className="mt-4 text-mist/80 text-[17.5px] max-w-xl mx-auto"
         >
           Have questions or want to see MetisSuiteAI in action? Fill out the
           form below and our specialized team will get in touch.
@@ -413,7 +413,7 @@ const Spotlight = () => {
                       </AnimatePresence>
                     </motion.div>
 
-                    <span className="text-[13px] text-mist/80 leading-snug group-hover:text-ivory transition-colors">
+                    <span className="text-[15.5px] text-mist/80 leading-snug group-hover:text-ivory transition-colors">
                       I agree to the{" "}
                       <a
                         href="/privacy"

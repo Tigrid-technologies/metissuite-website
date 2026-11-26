@@ -35,10 +35,10 @@ const LifescienceWorkflow = () => {
         >
           {/* Section Pill */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold text-teal bg-teal/10 border border-teal/20 backdrop-blur-lg">
-            <span className="w-4 h-4 rounded-full border border-teal text-[10px] flex items-center justify-center font-mono font-bold">
+            <span className="w-5 h-5 rounded-full border border-teal text-[12px] flex items-center justify-center font-mono font-bold">
               {badgeNumber}
             </span>
-            <span className="tracking-wider uppercase text-[11px] font-bold">
+            <span className="tracking-wider uppercase text-[13px] font-bold">
               {badgeLabel}
             </span>
           </div>
@@ -50,7 +50,7 @@ const LifescienceWorkflow = () => {
           </h2>
 
           {/* Description */}
-          <p className="text-mist/75 text-[14.5px] md:text-[15px] leading-relaxed">
+          <p className="text-mist/80 text-[17.5px] md:text-[18.5px] leading-relaxed">
             {description}
           </p>
 
@@ -59,7 +59,7 @@ const LifescienceWorkflow = () => {
             {bullets.map((bullet, i) => (
               <li
                 key={i}
-                className="flex items-baseline gap-3 text-[13.5px] text-ivory/85"
+                className="flex items-baseline gap-3 text-[16px] text-ivory/90"
               >
                 <div className="w-4 h-4 rounded-full bg-teal/15 text-teal flex items-center justify-center shrink-0 border border-teal/30">
                   <Check size={11} strokeWidth={3} />
@@ -84,7 +84,7 @@ const LifescienceWorkflow = () => {
               <span className="text-xs font-medium text-mist/90">
                 {cardHeader.title}
               </span>
-              <span className="text-[11px] font-mono font-bold tracking-widest text-teal uppercase">
+              <span className="text-[13px] font-mono font-bold tracking-widest text-teal uppercase">
                 {cardHeader.subtitle}
               </span>
             </div>
@@ -151,13 +151,13 @@ const LifescienceWorkflow = () => {
                         <div className="flex items-center justify-between">
                           <div>
                             <h4
-                              className={`text-[14.5px] font-semibold transition-colors duration-200 ${
+                              className={`text-[17px] font-semibold transition-colors duration-200 ${
                                 isActive ? "text-ivory" : "text-ivory/90"
                               }`}
                             >
                               {step.title}
                             </h4>
-                            <span className="text-[12px] text-mist/60 block font-medium mt-0.5">
+                            <span className="text-[14.5px] text-mist/70 block font-medium mt-0.5">
                               {step.agent}
                             </span>
                           </div>
@@ -187,7 +187,7 @@ const LifescienceWorkflow = () => {
                                 <div className="w-4 h-4 rounded-full border border-teal/60 bg-teal/10 flex items-center justify-center text-teal shrink-0 mt-0.5">
                                   <Check size={10} strokeWidth={3} />
                                 </div>
-                                <p className="text-[12.5px] text-mist/90 leading-relaxed">
+                                <p className="text-[15px] text-mist/90 leading-relaxed">
                                   {step.details}
                                 </p>
                               </div>
@@ -214,7 +214,7 @@ const LifescienceWorkflow = () => {
 
               <div className="flex items-center gap-2 pl-8 sm:pl-0">
                 <span className="w-2 h-2 rounded-full bg-teal shadow-[0_0_8px_#2ec4b6] animate-pulse" />
-                <span className="text-[11.5px] font-mono text-mist/70">
+                <span className="text-[13.5px] font-mono text-mist/75">
                   {cardFooter.checkpoint}
                 </span>
               </div>

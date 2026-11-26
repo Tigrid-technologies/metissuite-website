@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { HelpCircle, ChevronDown, MessageSquare, ArrowRight } from "lucide-react";
+import {
+  HelpCircle,
+  ChevronDown,
+  MessageSquare,
+  ArrowRight,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { bookingFaqs } from "../../utils/walkthroughItems";
 
@@ -36,7 +41,8 @@ const BookingFaq = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-3xl md:text-5xl font-bold tracking-tight text-ivory"
         >
-          Frequently Asked <span className="text-teal font-light">Questions</span>
+          Frequently Asked{" "}
+          <span className="text-teal font-light">Questions</span>
         </motion.h2>
 
         <motion.p
@@ -46,12 +52,13 @@ const BookingFaq = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-3.5 text-mist/80 text-sm sm:text-base leading-relaxed"
         >
-          Everything you need to know about our private 30-minute systems walkthrough, live software demo, and custom blueprint.
+          Everything you need to know about our private 30-minute systems
+          walkthrough, live software demo, and custom blueprint.
         </motion.p>
       </div>
 
       {/* Accordion FAQ List */}
-      <div className="max-w-3xl mx-auto space-y-3.5 relative z-10">
+      <div className="max-w-7xl mx-auto space-y-3.5 relative z-10">
         {bookingFaqs.map((item, idx) => {
           const isOpen = activeId === item.id;
 
@@ -75,7 +82,7 @@ const BookingFaq = () => {
                 aria-expanded={isOpen}
               >
                 <span
-                  className={`text-sm sm:text-[16px] font-semibold transition-colors duration-200 pr-4 ${
+                  className={`text-sm sm:text-[18.5px] font-semibold transition-colors duration-200 pr-4 ${
                     isOpen ? "text-teal" : "text-ivory group-hover:text-teal"
                   }`}
                 >
@@ -125,7 +132,8 @@ const BookingFaq = () => {
         className="mt-12 text-center"
       >
         <p className="text-xs sm:text-sm text-mist/70">
-          Have an enterprise security or custom deployment question before booking?{" "}
+          Have an enterprise security or custom deployment question before
+          booking?{" "}
           <Link
             to="/contact"
             className="text-teal font-semibold hover:underline inline-flex items-center gap-1 ml-1"
@@ -140,4 +148,3 @@ const BookingFaq = () => {
 };
 
 export default BookingFaq;
-

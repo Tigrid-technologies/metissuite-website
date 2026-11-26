@@ -46,12 +46,13 @@ const ServicesFaq = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-3.5 text-mist/80 text-sm sm:text-base leading-relaxed"
         >
-          Everything you need to know about deploying individual modules, hardware setup, and API integrations.
+          Everything you need to know about deploying individual modules,
+          hardware setup, and API integrations.
         </motion.p>
       </div>
 
       {/* Accordion List */}
-      <div className="max-w-3xl mx-auto space-y-3.5 relative z-10">
+      <div className="max-w-7xl mx-auto space-y-3.5 relative z-10">
         {servicesFaqs.map((item, idx) => {
           const isOpen = activeId === item.id;
 
@@ -75,7 +76,7 @@ const ServicesFaq = () => {
                 aria-expanded={isOpen}
               >
                 <span
-                  className={`text-sm sm:text-[16px] font-semibold transition-colors duration-200 pr-4 ${
+                  className={`text-sm sm:text-[18.5px] font-semibold transition-colors duration-200 pr-4 ${
                     isOpen ? "text-teal" : "text-ivory group-hover:text-teal"
                   }`}
                 >
@@ -140,4 +141,3 @@ const ServicesFaq = () => {
 };
 
 export default ServicesFaq;
-

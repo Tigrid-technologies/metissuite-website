@@ -68,11 +68,11 @@ const Ensemble = () => {
           <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 space-y-2">
             <div className="flex items-center justify-between text-xs">
               <span className="font-semibold text-ivory">Dr. Aris Thorne</span>
-              <span className="text-[11px] text-teal font-medium bg-teal/10 px-2 py-0.5 rounded-full border border-teal/20">
+              <span className="text-[13.5px] text-teal font-medium bg-teal/10 px-2 py-0.5 rounded-full border border-teal/20">
                 98% Match
               </span>
             </div>
-            <div className="flex items-center justify-between text-[11px] text-mist/70">
+            <div className="flex items-center justify-between text-[13.5px] text-mist/75">
               <span>BioTech Therapeutics</span>
               <span className="flex items-center gap-1 text-teal">
                 <CalendarCheck size={12} /> Booked 2:30 PM
@@ -105,7 +105,7 @@ const Ensemble = () => {
                   <div className="w-8 h-8 rounded-lg bg-[#818cf8]/15 border border-[#818cf8]/30 flex items-center justify-center text-xs font-bold text-[#818cf8]">
                     {channel[0]}
                   </div>
-                  <span className="text-[10px] text-mist/70">{channel}</span>
+                  <span className="text-[12.5px] text-mist/75">{channel}</span>
                 </div>
                 {i < 2 && (
                   <div className="flex-1 mx-2 relative h-5 flex items-center">
@@ -148,7 +148,7 @@ const Ensemble = () => {
           {/* Sequence status banner */}
           <div className="p-2.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-center justify-between text-xs">
             <span className="text-mist/80">Reactivation Flow 03</span>
-            <span className="text-[#818cf8] font-semibold text-[11px] bg-[#818cf8]/10 px-2 py-0.5 rounded-md">
+            <span className="text-[#818cf8] font-semibold text-[13.5px] bg-[#818cf8]/10 px-2 py-0.5 rounded-md">
               78% Open Rate
             </span>
           </div>
@@ -176,7 +176,7 @@ const Ensemble = () => {
               <Search size={13} className="text-gold shrink-0" />
               <span className="truncate">Target: Oncology & Biomarkers</span>
             </div>
-            <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0">
+            <span className="text-[12.5px] font-semibold text-gold bg-gold/10 px-2 py-0.5 rounded-full shrink-0">
               Scanning
             </span>
           </div>
@@ -186,7 +186,7 @@ const Ensemble = () => {
             {["Google Scholar", "PubMed", "ClinicalTrials.gov", "NIH Grants"].map((source, i) => (
               <span
                 key={source}
-                className="text-[10.5px] px-2 py-1 rounded-lg bg-gold/10 text-gold/90 border border-gold/20 font-medium"
+                className="text-[13px] px-2 py-1 rounded-lg bg-gold/10 text-gold/90 border border-gold/20 font-medium"
               >
                 {source}
               </span>
@@ -213,17 +213,17 @@ const Ensemble = () => {
           {/* Tone & Draft header */}
           <div className="p-2.5 rounded-xl bg-[#121636]/90 border border-[#f43f5e]/20 flex items-center justify-between text-xs">
             <span className="text-mist/80">Voice: Scientific & Direct</span>
-            <span className="text-[10.5px] font-semibold text-[#f43f5e] bg-[#f43f5e]/10 px-2 py-0.5 rounded-md">
+            <span className="text-[13px] font-semibold text-[#f43f5e] bg-[#f43f5e]/10 px-2 py-0.5 rounded-md">
               AI Synthesized
             </span>
           </div>
 
           {/* Post preview pill */}
           <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 space-y-1.5 text-left">
-            <p className="text-[11.5px] text-ivory font-medium line-clamp-2 leading-relaxed">
+            <p className="text-[14px] text-ivory font-medium line-clamp-2 leading-relaxed">
               "Key breakthroughs in recombinant assays: What researchers should expect in Q3..."
             </p>
-            <div className="flex items-center justify-between text-[10.5px] text-mist/60 pt-1">
+            <div className="flex items-center justify-between text-[13px] text-mist/65 pt-1">
               <span>Auto-drafted</span>
               <span className="text-[#f43f5e] font-medium">Ready for Review</span>
             </div>
@@ -249,18 +249,18 @@ const Ensemble = () => {
           {/* Invoice summary card */}
           <div className="p-3 rounded-xl bg-[#121636]/90 border border-[#c084fc]/20 flex items-center justify-between">
             <div>
-              <span className="text-[11px] text-mist/70 block">INV-2048</span>
+              <span className="text-[13.5px] text-mist/75 block">INV-2048</span>
               <span className="text-sm font-bold text-ivory">$4,250.00</span>
             </div>
-            <span className="text-[11px] font-semibold text-[#c084fc] bg-[#c084fc]/10 px-2 py-1 rounded-lg border border-[#c084fc]/20 flex items-center gap-1">
-              <CheckCircle2 size={12} /> Auto-Prepared
+            <span className="text-[13.5px] font-semibold text-[#c084fc] bg-[#c084fc]/10 px-2 py-1 rounded-lg border border-[#c084fc]/20 flex items-center gap-1">
+              <CheckCircle2 size={13} /> Auto-Prepared
             </span>
           </div>
 
           {/* Follow-up schedule status */}
           <div className="p-2.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-center justify-between text-xs">
             <span className="text-mist/80">Due in 5 days</span>
-            <span className="text-[#c084fc] text-[11px] font-medium">Approval Pending</span>
+            <span className="text-[#c084fc] text-[13.5px] font-medium">Approval Pending</span>
           </div>
         </div>
       ),
@@ -283,10 +283,10 @@ const Ensemble = () => {
           {/* PO Tracker Card */}
           <div className="p-3 rounded-xl bg-[#121636]/90 border border-[#10b981]/20 flex items-center justify-between">
             <div>
-              <span className="text-[11px] text-mist/70 block">PO-8914 • Lab Supplies</span>
+              <span className="text-[13.5px] text-mist/75 block">PO-8914 • Lab Supplies</span>
               <span className="text-xs font-semibold text-ivory">Thermoscientific Reagents</span>
             </div>
-            <span className="text-[11px] font-semibold text-[#10b981] bg-[#10b981]/10 px-2 py-1 rounded-lg border border-[#10b981]/20">
+            <span className="text-[13.5px] font-semibold text-[#10b981] bg-[#10b981]/10 px-2 py-1 rounded-lg border border-[#10b981]/20">
               Dispatched
             </span>
           </div>
@@ -294,7 +294,7 @@ const Ensemble = () => {
           {/* Delivery Milestone */}
           <div className="p-2.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-center justify-between text-xs">
             <span className="text-mist/80">3/3 Milestones cleared</span>
-            <span className="text-[#10b981] text-[11px] font-medium">Arriving Thursday</span>
+            <span className="text-[#10b981] text-[13.5px] font-medium">Arriving Thursday</span>
           </div>
         </div>
       ),
@@ -311,9 +311,9 @@ const Ensemble = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="inline-flex justify-center gap-2 items-center px-4 py-1.5 rounded-full text-[12.5px] text-gold border border-gold/20 bg-gold/10 backdrop-blur-lg mb-4 font-semibold uppercase tracking-wider"
+          className="inline-flex justify-center gap-2 items-center px-4 py-1.5 rounded-full text-[14.5px] text-gold border border-gold/20 bg-gold/10 backdrop-blur-lg mb-4 font-semibold uppercase tracking-wider"
         >
-          <Sparkles size={15} />
+          <Sparkles size={16} />
           <span>02. The Ensemble</span>
         </motion.div>
 
@@ -333,7 +333,7 @@ const Ensemble = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-4 text-mist/80 text-[15px] md:text-[16px] max-w-2xl mx-auto leading-relaxed"
+          className="mt-4 text-mist/85 text-[17.5px] md:text-[18.5px] max-w-2xl mx-auto leading-relaxed"
         >
           Each Metis agent owns a business routine. Together, they share
           context and keep the next step moving seamlessly under your
@@ -415,14 +415,14 @@ const Ensemble = () => {
                   />
                 </h3>
 
-                <p className="mt-2 text-xs md:text-[13px] text-mist/75 leading-relaxed min-h-[48px]">
+                <p className="mt-2 text-sm md:text-[16px] text-mist/80 leading-relaxed min-h-[54px]">
                   {agent.description}
                 </p>
               </div>
 
               {/* Card Bottom: Animated Live Micro-Simulation Widget */}
               <div className="relative z-10 mt-6 pt-5 border-t border-white/[0.06]">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-mist/50 mb-2.5 flex items-center justify-between">
+                <div className="text-[12.5px] font-bold uppercase tracking-wider text-mist/55 mb-2.5 flex items-center justify-between">
                   <span>Live Agent Routine</span>
                   <span className="flex items-center gap-1 text-teal">
                     <Activity size={10} className="animate-pulse" />
@@ -450,10 +450,10 @@ const Ensemble = () => {
             <Layers size={22} strokeWidth={1.8} />
           </div>
           <div>
-            <h4 className="text-[17px] font-bold text-ivory">
+            <h4 className="text-[19px] font-bold text-ivory">
               Shared Context Across Every Routine
             </h4>
-            <p className="text-[13.5px] text-mist/75 mt-0.5 max-w-xl">
+            <p className="text-[16px] text-mist/80 mt-0.5 max-w-xl">
               When Metis Research identifies a lead, Metis Outreach triggers the
               sequence, Metis Voice handles inbound calls, and Metis Books drafts
               the invoice—all without siloed data.

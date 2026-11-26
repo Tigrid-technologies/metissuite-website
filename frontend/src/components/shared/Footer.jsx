@@ -33,7 +33,7 @@ const FooterRollingLink = ({ href, children, external }) => {
 
   const content = (
     <span
-      className="relative inline-flex items-center overflow-hidden py-0.5 text-xs sm:text-[13px] font-medium text-mist/75 hover:text-white transition-colors group cursor-pointer"
+      className="relative inline-flex items-center overflow-hidden py-0.5 text-xs sm:text-[15.5px] font-medium text-mist/75 hover:text-white transition-colors group cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -245,11 +245,11 @@ const Footer = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
                 </span>
-                <span className="text-ivory font-medium text-[11.5px] group-hover:text-teal transition-colors">
+                <span className="text-ivory font-medium text-[14px] group-hover:text-teal transition-colors">
                   {footerData.brand.status.label}
                 </span>
                 <span className="text-white/20">•</span>
-                <span className="text-teal font-semibold text-[11px] font-mono">
+                <span className="text-teal font-semibold text-[13.5px] font-mono">
                   {footerData.brand.status.uptime}
                 </span>
                 <Terminal
@@ -264,7 +264,7 @@ const Footer = () => {
                 onClick={handleCopyEmail}
                 className="group inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/10 hover:border-gold/40 hover:bg-gold/[0.06] text-xs text-ivory transition-all cursor-pointer"
               >
-                <span className="text-[11.5px] font-mono">
+                <span className="text-[14px] font-mono">
                   {footerData.brand.contactEmail}
                 </span>
                 <AnimatePresence mode="wait" initial={false}>
@@ -274,7 +274,7 @@ const Footer = () => {
                       initial={{ scale: 0.8, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       exit={{ scale: 0.8, opacity: 0 }}
-                      className="text-gold text-[11px] font-bold flex items-center gap-1"
+                      className="text-gold text-[13.5px] font-bold flex items-center gap-1"
                     >
                       <Check size={12} strokeWidth={2.5} />
                       <span>Copied!</span>
@@ -333,7 +333,7 @@ const Footer = () => {
                 <motion.span
                   initial={{ opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="absolute left-0 top-full mt-1.5 text-[11px] text-teal font-semibold block"
+                  className="absolute left-0 top-full mt-1.5 text-[13.5px] text-teal font-semibold block"
                 >
                   ✓ Subscribed to weekly intelligence dispatch.
                 </motion.span>
@@ -374,7 +374,7 @@ const Footer = () => {
                   {footerData.agentTelemetry.map((agent) => (
                     <div
                       key={agent.name}
-                      className="p-3 rounded-xl bg-[#090c21] border border-white/[0.08] font-mono text-[11px] space-y-1"
+                      className="p-3 rounded-xl bg-[#090c21] border border-white/[0.08] font-mono text-[13.5px] space-y-1"
                     >
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-ivory">
@@ -385,11 +385,11 @@ const Footer = () => {
                           style={{ backgroundColor: agent.color }}
                         />
                       </div>
-                      <div className="text-[10px] text-mist/60">
+                      <div className="text-[13px] text-mist/60">
                         {agent.role}
                       </div>
                       <div
-                        className="text-[10px] font-semibold pt-1 border-t border-white/[0.05]"
+                        className="text-[13px] font-semibold pt-1 border-t border-white/[0.05]"
                         style={{ color: agent.color }}
                       >
                         {agent.latency}
@@ -441,7 +441,7 @@ const Footer = () => {
                 />
               </Link>
 
-              <div className="rounded-xl bg-white/[0.02] border border-white/[0.06] p-3 text-[11px] text-mist/70 space-y-1">
+              <div className="rounded-xl bg-white/[0.02] border border-white/[0.06] p-3 text-[13.5px] text-mist/70 space-y-1">
                 <div className="flex items-center gap-1.5 text-teal font-semibold">
                   <Shield size={12} />
                   <span>Enterprise Security</span>
@@ -492,7 +492,7 @@ const Footer = () => {
                 />
               </svg>
 
-              <span className="text-[11px] font-semibold">Back to Top</span>
+              <span className="text-[13.5px] font-semibold">Back to Top</span>
               <ArrowUp
                 size={12}
                 className="group-hover:-translate-y-0.5 transition-transform"

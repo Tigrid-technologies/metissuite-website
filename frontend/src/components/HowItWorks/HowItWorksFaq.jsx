@@ -36,7 +36,8 @@ const HowItWorksFaq = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-3xl md:text-5xl font-bold tracking-tight text-ivory"
         >
-          Technical & Safety <span className="text-teal font-light">Questions</span>
+          Technical & Safety{" "}
+          <span className="text-teal font-light">Questions</span>
         </motion.h2>
 
         <motion.p
@@ -46,12 +47,13 @@ const HowItWorksFaq = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-3.5 text-mist/80 text-sm sm:text-base leading-relaxed"
         >
-          Clear answers on compliance, integrations, data sovereignty, and human-in-the-loop control.
+          Clear answers on compliance, integrations, data sovereignty, and
+          human-in-the-loop control.
         </motion.p>
       </div>
 
       {/* Accordion Container */}
-      <div className="max-w-3xl mx-auto space-y-3.5 relative z-10">
+      <div className="max-w-7xl mx-auto space-y-3.5 relative z-10">
         {howItWorksFaqs.map((item, idx) => {
           const isOpen = activeId === item.id;
 
@@ -75,7 +77,7 @@ const HowItWorksFaq = () => {
                 aria-expanded={isOpen}
               >
                 <span
-                  className={`text-sm sm:text-[16px] font-semibold transition-colors duration-200 pr-4 ${
+                  className={`text-sm sm:text-[18.5px] font-semibold transition-colors duration-200 pr-4 ${
                     isOpen ? "text-teal" : "text-ivory group-hover:text-teal"
                   }`}
                 >
@@ -140,4 +142,3 @@ const HowItWorksFaq = () => {
 };
 
 export default HowItWorksFaq;
-

@@ -55,14 +55,14 @@ const TestimonialCard = ({ item, dimmed, onEnter, onLeave }) => {
         style={{ color: item.accent }}
         strokeWidth={1.6}
       />
-      <p className="relative text-[14px] leading-relaxed text-ivory/90 min-h-[96px]">
+      <p className="relative text-[16.5px] leading-relaxed text-ivory/90 min-h-[96px]">
         {item.quote}
       </p>
 
       <div className="relative mt-5 pt-4 border-t border-white/[0.07] flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div
-            className="w-9 h-9 rounded-full flex items-center justify-center text-[12px] font-bold border"
+            className="w-9 h-9 rounded-full flex items-center justify-center text-[14.5px] font-bold border"
             style={{
               color: item.accent,
               background: `${item.accent}1f`,
@@ -72,10 +72,10 @@ const TestimonialCard = ({ item, dimmed, onEnter, onLeave }) => {
             {initials(item.name)}
           </div>
           <div>
-            <p className="text-[13px] font-semibold text-ivory leading-tight">
+            <p className="text-[15.5px] font-semibold text-ivory leading-tight">
               {item.name}
             </p>
-            <p className="text-[11.5px] text-mist/60 mt-0.5">{item.role}</p>
+            <p className="text-[14px] text-mist/60 mt-0.5">{item.role}</p>
           </div>
         </div>
         <div className="flex gap-0.5">
@@ -161,7 +161,7 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1 rounded-full text-[13px] text-teal border border-teal/20 bg-teal/10 backdrop-blur-lg mb-4"
+          className="inline-flex items-center gap-2 px-4 py-1 rounded-full text-[15.5px] text-teal border border-teal/20 bg-teal/10 backdrop-blur-lg mb-4"
         >
           <MessageSquareQuote size={15} />
           <span>{testimonialsHeader.badge}</span>
@@ -183,7 +183,7 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-3.5 text-mist/75 text-[15px]"
+          className="mt-3.5 text-mist/75 text-[17.5px]"
         >
           {testimonialsHeader.subtitle}
         </motion.p>

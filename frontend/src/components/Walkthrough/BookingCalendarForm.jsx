@@ -202,7 +202,7 @@ const BookingCalendarForm = () => {
                       >
                         {/* Optional TOMORROW badge floating on top border */}
                         {day.badge && (
-                          <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-blue-500 text-white font-extrabold text-[10px] tracking-wider uppercase shadow-md pointer-events-none">
+                          <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-blue-500 text-white font-extrabold text-[13px] tracking-wider uppercase shadow-md pointer-events-none">
                             {day.badge}
                           </div>
                         )}
@@ -227,7 +227,7 @@ const BookingCalendarForm = () => {
 
                         {/* Open Slots Count */}
                         <span
-                          className={`text-[11px] font-medium ${
+                          className={`text-[13.5px] font-medium ${
                             isSelected ? "text-teal/90" : "text-mist/50"
                           }`}
                         >

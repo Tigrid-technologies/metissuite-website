@@ -22,13 +22,13 @@ const ServicesSpotlight = ({ activeCategory, onSelectCategory }) => {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[480px] bg-gradient-to-tr from-teal/15 via-indigo/25 to-gold/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="wrapper relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           {/* Top glowing badge */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/[0.04] border border-gold/10 text-mist text-[12.5px] font-medium tracking-wide mb-6 "
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/[0.04] border border-gold/10 text-mist text-[15px] font-medium tracking-wide mb-6 "
           >
             <Layers size={14} className="text-gold animate-pulse" />
             <span className="text-gold font-light">
@@ -117,7 +117,7 @@ const ServicesSpotlight = ({ activeCategory, onSelectCategory }) => {
                 <div className="mt-1 text-xs font-bold text-teal">
                   {stat.label}
                 </div>
-                <div className="mt-0.5 text-[11px] text-mist/60 leading-tight">
+                <div className="mt-0.5 text-[13.5px] text-mist/60 leading-tight">
                   {stat.sub}
                 </div>
               </div>

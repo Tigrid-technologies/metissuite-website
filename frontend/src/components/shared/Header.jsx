@@ -11,7 +11,7 @@ const RollingLink = ({ href, children, isActive }) => {
     return (
       <Link
         to={href}
-        className="font-secondary relative inline-block py-1 text-[14px] font-semibold text-teal"
+        className="font-secondary relative inline-block py-1 text-[16.5px] font-semibold text-teal"
       >
         <span>{children}</span>
         {/* Active Underline Pill Indicator for Current Page Only */}
@@ -29,7 +29,7 @@ const RollingLink = ({ href, children, isActive }) => {
       to={href}
       initial="initial"
       whileHover="hover"
-      className="font-secondary relative inline-block py-1 text-[14px] font-semibold text-white/90 hover:text-white transition-colors duration-200"
+      className="font-secondary relative inline-block py-1 text-[16.5px] font-semibold text-white/90 hover:text-white transition-colors duration-200"
     >
       <div className="relative inline-flex overflow-hidden">
         {/* Default White Layer */}
@@ -127,7 +127,7 @@ const Header = () => {
             <Link to="/" className="logo text-[20px] select-none shrink-0">
               <span className="font-bold text-ivory">Metis</span>
               <span className="font-light text-ivory">Suite</span>
-              <span className="font-semibold text-[12px] text-gold ml-1">
+              <span className="font-semibold text-[14.5px] text-gold ml-1">
                 AI
               </span>
             </Link>
@@ -147,7 +147,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Right Actions */}
-          <div className="hidden lg:flex items-center gap-5 text-[14px]">
+          <div className="hidden lg:flex items-center gap-5 text-[16.5px]">
             <a
               href="https://metissuite.tigrid.in/login"
               target="_blank"
@@ -225,7 +225,7 @@ const Header = () => {
                   >
                     <span className="font-bold text-ivory">Metis</span>
                     <span className="font-light text-ivory">Suite</span>
-                    <span className="font-semibold text-[12px] text-gold ml-1">
+                    <span className="font-semibold text-[14.5px] text-gold ml-1">
                       AI
                     </span>
                   </Link>
@@ -257,7 +257,7 @@ const Header = () => {
                           delay: 0.08 + idx * 0.05,
                           duration: 0.3,
                         }}
-                        className={`flex items-center justify-between py-3 px-3.5 rounded-xl text-[15px] font-semibold transition-all group ${
+                        className={`flex items-center justify-between py-3 px-3.5 rounded-xl text-[17.5px] font-semibold transition-all group ${
                           isActive
                             ? "text-teal bg-teal/10 border border-teal/20"
                             : "text-mist hover:text-teal hover:bg-white/[0.04]"

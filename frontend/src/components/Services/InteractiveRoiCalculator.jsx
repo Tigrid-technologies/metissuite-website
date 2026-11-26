@@ -65,7 +65,7 @@ const InteractiveRoiCalculator = () => {
                     </button>
                   ))}
                 </div>
-                <span className="text-[11px] text-mist/50 mt-2 block">
+                <span className="text-[13.5px] text-mist/50 mt-2 block">
                   Commercial reps, R&D coordinators, lab managers, and leadership.
                 </span>
               </div>
@@ -87,7 +87,7 @@ const InteractiveRoiCalculator = () => {
                   onChange={(e) => setHourlyRate(Number(e.target.value))}
                   className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-[#e8b04b]"
                 />
-                <div className="flex items-center justify-between text-[11px] text-mist/40 mt-1">
+                <div className="flex items-center justify-between text-[13.5px] text-mist/40 mt-1">
                   <span>$40/hr (Junior ops)</span>
                   <span>$120/hr (Senior scientists / BD)</span>
                 </div>
@@ -132,7 +132,7 @@ const InteractiveRoiCalculator = () => {
                   <div className="font-secondary text-xl font-bold text-ivory">
                     {monthlyHoursSaved.toLocaleString()} hrs
                   </div>
-                  <span className="text-[10px] text-mist/50">Returned to core science</span>
+                  <span className="text-[13px] text-mist/50">Returned to core science</span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.06]">
@@ -143,7 +143,7 @@ const InteractiveRoiCalculator = () => {
                   <div className="font-secondary text-xl font-bold text-ivory">
                     3.4x Faster
                   </div>
-                  <span className="text-[10px] text-mist/50">From lead tap to call</span>
+                  <span className="text-[13px] text-mist/50">From lead tap to call</span>
                 </div>
               </div>
 

@@ -70,7 +70,7 @@ const ArchitecturePipeline = () => {
                   {isActive ? (
                     <span className="w-2 h-2 rounded-full bg-teal animate-ping" />
                   ) : (
-                    <span className="text-[11px] text-mist/40 font-mono">0{idx + 1}</span>
+                    <span className="text-[13.5px] text-mist/40 font-mono">0{idx + 1}</span>
                   )}
                 </div>
 
@@ -155,9 +155,9 @@ const ArchitecturePipeline = () => {
                       <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
                       <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-                      <span className="ml-2 text-ivory/70 text-[11px]">telemetry.json</span>
+                      <span className="ml-2 text-ivory/70 text-[13.5px]">telemetry.json</span>
                     </div>
-                    <span className="text-[10px] text-teal font-semibold">STAGE ACTIVE</span>
+                    <span className="text-[13px] text-teal font-semibold">STAGE ACTIVE</span>
                   </div>
 
                   {/* Terminal Body */}
@@ -176,7 +176,7 @@ const ArchitecturePipeline = () => {
                   </div>
 
                   {/* Simulated Status Bar */}
-                  <div className="mt-5 pt-3 border-t border-white/[0.08] flex items-center justify-between text-[10px] text-mist/50">
+                  <div className="mt-5 pt-3 border-t border-white/[0.08] flex items-center justify-between text-[13px] text-mist/50">
                     <span>Protocol: MetisOS v2.4</span>
                     <span className="text-teal">Lat: 42ms • Status: 200 OK</span>
                   </div>

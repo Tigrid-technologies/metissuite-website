@@ -76,7 +76,7 @@ const AgentOrchestrationDeck = () => {
                 </div>
                 <span>{agent.name}</span>
                 <span
-                  className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-md"
+                  className="text-[13px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-md"
                   style={{
                     backgroundColor: `${agent.accent}15`,
                     color: agent.accent,
@@ -145,7 +145,7 @@ const AgentOrchestrationDeck = () => {
                     <div className="text-xs sm:text-sm font-bold font-secondary text-ivory">
                       {value}
                     </div>
-                    <div className="text-[10px] text-mist/60 capitalize">
+                    <div className="text-[13px] text-mist/60 capitalize">
                       {key.replace(/([A-Z])/g, " $1")}
                     </div>
                   </div>
@@ -182,7 +182,7 @@ const AgentOrchestrationDeck = () => {
               <div className="space-y-4">
                 {/* Context Inflow */}
                 <div className="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-teal block mb-1">
+                  <span className="text-[13.5px] font-bold uppercase tracking-wider text-teal block mb-1">
                     Context Inflow (Inputs):
                   </span>
                   <p className="text-xs sm:text-sm text-mist/90 leading-relaxed">
@@ -192,7 +192,7 @@ const AgentOrchestrationDeck = () => {
 
                 {/* Action Outflow */}
                 <div className="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-gold block mb-1">
+                  <span className="text-[13.5px] font-bold uppercase tracking-wider text-gold block mb-1">
                     Action Outflow (Outputs):
                   </span>
                   <p className="text-xs sm:text-sm text-mist/90 leading-relaxed">
@@ -204,7 +204,7 @@ const AgentOrchestrationDeck = () => {
                 <div className="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4 flex items-start gap-3">
                   <Shield size={18} className="text-[#38bdf8] shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#38bdf8] block mb-0.5">
+                    <span className="text-[13.5px] font-bold uppercase tracking-wider text-[#38bdf8] block mb-0.5">
                       Deterministic Safety Guardrail:
                     </span>
                     <p className="text-xs sm:text-sm text-mist/90 leading-relaxed">

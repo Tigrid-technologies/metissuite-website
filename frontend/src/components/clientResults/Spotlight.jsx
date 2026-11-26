@@ -22,7 +22,7 @@ const Spotlight = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex justify-center gap-2 items-center px-5 py-1 rounded-full text-[13px] text-gold border border-gold/20 bg-gold/10 backdrop-blur-lg mb-4"
+            className="inline-flex justify-center gap-2 items-center px-5 py-1 rounded-full text-[15.5px] text-gold border border-gold/20 bg-gold/10 backdrop-blur-lg mb-4"
           >
             <Sparkles size={15} strokeWidth={1.8} />
             <span>{resultsSpotlight.badge}</span>
@@ -44,7 +44,7 @@ const Spotlight = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-4 text-mist/80 text-[15px] max-w-xl mx-auto"
+            className="mt-4 text-mist/80 text-[17.5px] max-w-xl mx-auto"
           >
             {resultsSpotlight.description}
           </motion.p>
@@ -67,7 +67,7 @@ const Spotlight = () => {
           initial={{ opacity: 0, y: 35, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-2xl mx-auto mt-10 md:mt-12 text-left"
+          className="relative w-full max-w-6xl mx-auto mt-10 md:mt-12 text-left"
         >
           <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-b from-teal/15 via-transparent to-indigo/20 blur-xl pointer-events-none" />
 
@@ -79,7 +79,7 @@ const Spotlight = () => {
               <span className="text-xs font-medium text-mist/80">
                 {resultsSpotlight.cardTitle}
               </span>
-              <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-teal bg-teal/10 border border-teal/20 px-2.5 py-0.5 rounded-full">
+              <span className="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-teal bg-teal/10 border border-teal/20 px-2.5 py-0.5 rounded-full">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal opacity-75" />
                   <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-teal" />
@@ -89,7 +89,7 @@ const Spotlight = () => {
             </div>
 
             {/* Stat tiles */}
-            <div className="grid grid-cols-2 gap-3 mt-4">
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3 mt-4">
               {resultStats.map((s, i) => {
                 const Icon = s.icon;
                 return (
@@ -117,7 +117,7 @@ const Spotlight = () => {
                         delay={0.5 + i * 0.1}
                       />
                     </div>
-                    <p className="mt-1.5 text-[12px] text-mist/70">{s.label}</p>
+                    <p className="mt-1.5 text-[14.5px] text-mist/70">{s.label}</p>
                   </motion.div>
                 );
               })}
@@ -126,10 +126,10 @@ const Spotlight = () => {
             {/* Pipeline growth bars */}
             <div className="mt-4 rounded-2xl bg-[#161b40]/60 border border-white/[0.07] p-4">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-[12px] text-mist/75">
+                <span className="text-[14.5px] text-mist/75">
                   {growthChart.title}
                 </span>
-                <span className="text-[12px] font-semibold text-teal tabular-nums inline-flex items-baseline">+
+                <span className="text-[14.5px] font-semibold text-teal tabular-nums inline-flex items-baseline">+
                   <RollingNumber
                     value={hoverBar !== null ? `${growthChart.bars[hoverBar].value}%` : `${growthChart.defaultValue}%`}
                     delay={hoverBar !== null ? 0 : 1.2}
@@ -158,14 +158,14 @@ const Spotlight = () => {
                           : "bg-gradient-to-t from-teal/30 to-teal/70"
                       }`}
                     />
-                    <span className="text-[10px] text-mist/50">{label}</span>
+                    <span className="text-[13px] text-mist/50">{label}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {resultsSpotlight.cardNote && (
-              <p className="mt-3 text-[10.5px] text-mist/40 text-center">
+              <p className="mt-3 text-[13px] text-mist/40 text-center">
                 {resultsSpotlight.cardNote}
               </p>
             )}

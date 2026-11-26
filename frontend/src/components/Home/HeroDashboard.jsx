@@ -23,7 +23,7 @@ const HeroDashboard = () => {
       initial={{ opacity: 0, y: 35, scale: 0.97 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-      className="relative w-full max-w-[780px] mx-auto mt-10 md:mt-12 text-left"
+      className="relative w-full max-w-[850px] mx-auto mt-10 md:mt-12 text-left"
     >
 
       {/* Main Glass Card Frame */}
@@ -33,16 +33,16 @@ const HeroDashboard = () => {
         <div className="flex items-center justify-between pb-5 border-b border-white/[0.06]">
           {/* Left Brand Identifier */}
           <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#2ec4b6] to-[#14b8a6] text-midnight flex items-center justify-center font-bold text-[13px] shadow-[0_0_12px_rgba(46,196,182,0.4)]">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2ec4b6] to-[#14b8a6] text-midnight flex items-center justify-center font-bold text-[15px] shadow-[0_0_12px_rgba(46,196,182,0.4)]">
               M
             </div>
-            <span className="text-mist/80 text-[13px] font-medium tracking-wide">
+            <span className="text-mist/85 text-[15.5px] font-medium tracking-wide">
               Monday, conducted
             </span>
           </div>
 
           {/* Right Live Pulse Pill */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1b234b]/60 border border-teal/20 text-teal text-[11px] font-semibold tracking-wide">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1b234b]/60 border border-teal/20 text-teal text-[13.5px] font-semibold tracking-wide">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-teal"></span>
@@ -64,10 +64,10 @@ const HeroDashboard = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-teal/5 rounded-full blur-2xl pointer-events-none" />
 
             <div>
-              <span className="text-teal text-[10.5px] font-bold tracking-[0.18em] uppercase">
+              <span className="text-teal text-[13px] font-bold tracking-[0.18em] uppercase">
                 TODAY'S SCORE
               </span>
-              <h3 className="text-2xl md:text-[26px] font-semibold text-ivory tracking-tight leading-snug mt-4">
+              <h3 className="text-2xl md:text-[28px] font-semibold text-ivory tracking-tight leading-snug mt-4">
                 Every routine,<br />in perfect time.
               </h3>
             </div>
@@ -75,8 +75,8 @@ const HeroDashboard = () => {
             {/* Bottom Progress Rhythm */}
             <div className="mt-8 pt-2">
               <div className="flex items-center justify-between text-xs mb-2.5">
-                <span className="text-mist/80 font-medium text-[12px]">Business rhythm</span>
-                <span className="font-bold text-ivory text-[13px]">92%</span>
+                <span className="text-mist/85 font-medium text-[14.5px]">Business rhythm</span>
+                <span className="font-bold text-ivory text-[15.5px]">92%</span>
               </div>
               <div className="w-full h-2 bg-[#121633] rounded-full overflow-hidden p-[1px] border border-white/[0.04]">
                 <motion.div
@@ -115,15 +115,15 @@ const HeroDashboard = () => {
                   <Users size={19} strokeWidth={2} />
                 </div>
                 <div>
-                  <h4 className="text-[13.5px] font-semibold text-ivory group-hover:text-teal transition-colors duration-200">
+                  <h4 className="text-[16px] font-semibold text-ivory group-hover:text-teal transition-colors duration-200">
                     12 new leads
                   </h4>
-                  <p className="text-[11.5px] text-mist/70">
+                  <p className="text-[14px] text-mist/75">
                     4 ready for review
                   </p>
                 </div>
               </div>
-              <span className="text-[11.5px] font-semibold text-teal/95 bg-teal/10 px-2 py-0.5 rounded-md border border-teal/20">
+              <span className="text-[14px] font-semibold text-teal/95 bg-teal/10 px-2.5 py-0.5 rounded-md border border-teal/20">
                 +18%
               </span>
             </motion.div>
@@ -139,10 +139,10 @@ const HeroDashboard = () => {
                   <FileText size={19} strokeWidth={2} />
                 </div>
                 <div>
-                  <h4 className="text-[13.5px] font-semibold text-ivory group-hover:text-gold transition-colors duration-200">
+                  <h4 className="text-[16px] font-semibold text-ivory group-hover:text-gold transition-colors duration-200">
                     3 invoices prepared
                   </h4>
-                  <p className="text-[11.5px] text-mist/70">
+                  <p className="text-[14px] text-mist/75">
                     Awaiting your approval
                   </p>
                 </div>
@@ -164,10 +164,10 @@ const HeroDashboard = () => {
                   <Calendar size={19} strokeWidth={2} />
                 </div>
                 <div>
-                  <h4 className="text-[13.5px] font-semibold text-ivory group-hover:text-teal transition-colors duration-200">
+                  <h4 className="text-[16px] font-semibold text-ivory group-hover:text-teal transition-colors duration-200">
                     Follow-ups on track
                   </h4>
-                  <p className="text-[11.5px] text-mist/70">
+                  <p className="text-[14px] text-mist/75">
                     Next run in 18 min
                   </p>
                 </div>
@@ -210,7 +210,7 @@ const HeroDashboard = () => {
             >
               <div className="flex items-center gap-2.5">
                 <span className={`w-2 h-2 rounded-full ${agent.color} ${agent.glow}`} />
-                <span className="text-[12.5px] font-medium text-ivory/85 group-hover:text-white transition-colors duration-200">
+                <span className="text-[15px] font-medium text-ivory/90 group-hover:text-white transition-colors duration-200">
                   {agent.name}
                 </span>
               </div>

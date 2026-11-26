@@ -25,13 +25,13 @@ const ApprovalWidget = ({ mockData, accent }) => {
   return (
     <div className="mt-5 p-4 rounded-2xl bg-[#0d112d]/90 border border-white/10 relative overflow-hidden shadow-inner">
       <div className="flex items-center justify-between gap-2 mb-3">
-        <span className="text-[11px] font-mono tracking-wider uppercase text-mist/60">
+        <span className="text-[13px] font-mono tracking-wider uppercase text-mist/65">
           {mockData.actionType}
         </span>
         <motion.div
           animate={{ scale: approved ? [1, 1.08, 1] : 1 }}
           transition={{ duration: 0.3 }}
-          className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold transition-colors duration-300 ${
+          className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[13px] font-semibold transition-colors duration-300 ${
             approved
               ? "bg-emerald-500/15 border border-emerald-500/30 text-emerald-400"
               : "bg-amber-500/15 border border-amber-500/30 text-amber-400"
@@ -39,7 +39,7 @@ const ApprovalWidget = ({ mockData, accent }) => {
         >
           {approved ? (
             <>
-              <CheckCircle2 size={12} strokeWidth={2.5} />
+              <CheckCircle2 size={13} strokeWidth={2.5} />
               <span>{mockData.statusApproved}</span>
             </>
           ) : (
@@ -52,17 +52,17 @@ const ApprovalWidget = ({ mockData, accent }) => {
       </div>
 
       <div className="space-y-1 mb-4">
-        <p className="text-[13.5px] font-semibold text-ivory">
+        <p className="text-[16px] font-semibold text-ivory">
           {mockData.recipient}
         </p>
-        <p className="text-[12px] font-mono text-mist/70">
+        <p className="text-[14.5px] font-mono text-mist/75">
           Value:{" "}
           <span className="text-amber-400 font-bold">{mockData.amount}</span>
         </p>
       </div>
 
       <div className="flex items-center justify-between pt-3 border-t border-white/[0.08]">
-        <span className="text-[11px] text-mist/50 truncate max-w-[170px]">
+        <span className="text-[13.5px] text-mist/60 truncate max-w-[170px]">
           {approved ? `Approved by Dr. Vance` : `Requires sign-off`}
         </span>
 
@@ -104,7 +104,7 @@ const ContextWidget = ({ modules, accent }) => {
           <button
             key={m.name}
             onClick={() => setActiveMod(idx)}
-            className={`flex-1 py-1.5 px-2 rounded-lg text-[11px] font-medium transition-all duration-200 text-center truncate ${
+            className={`flex-1 py-1.5 px-2 rounded-lg text-[13px] font-medium transition-all duration-200 text-center truncate ${
               activeMod === idx
                 ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm"
                 : "text-mist/60 hover:text-mist hover:bg-white/5 border border-transparent"
@@ -125,18 +125,18 @@ const ContextWidget = ({ modules, accent }) => {
           className="space-y-2 py-1"
         >
           <div className="flex items-center justify-between text-xs">
-            <span className="text-cyan-400 font-mono text-[11px] font-semibold">
+            <span className="text-cyan-400 font-mono text-[13px] font-semibold">
               ● {modules[activeMod].tag} Stream
             </span>
-            <span className="text-[10.5px] text-mist/50">Synced just now</span>
+            <span className="text-[12.5px] text-mist/60">Synced just now</span>
           </div>
-          <p className="text-[12.5px] text-ivory/90 font-medium leading-relaxed">
+          <p className="text-[15px] text-ivory/90 font-medium leading-relaxed">
             {modules[activeMod].detail}
           </p>
         </motion.div>
       </AnimatePresence>
 
-      <div className="mt-3 pt-2.5 border-t border-white/[0.08] flex items-center justify-between text-[11px] text-mist/60">
+      <div className="mt-3 pt-2.5 border-t border-white/[0.08] flex items-center justify-between text-[13px] text-mist/65">
         <span>Connected graph</span>
         <span className="text-cyan-400 font-mono font-medium">3/3 Sync Active</span>
       </div>
@@ -168,7 +168,7 @@ const HandoffWidget = ({ steps, accent }) => {
           >
             <div className="flex items-center justify-between mb-1.5">
               <span
-                className={`text-[12px] font-semibold ${
+                className={`text-[14.5px] font-semibold ${
                   isCurrent
                     ? "text-purple-300"
                     : isDone
@@ -179,7 +179,7 @@ const HandoffWidget = ({ steps, accent }) => {
                 {step.label}
               </span>
               <span
-                className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
+                className={`text-[12.5px] font-mono px-2 py-0.5 rounded-full ${
                   isCurrent
                     ? "bg-purple-500/25 text-purple-300 border border-purple-500/40"
                     : isDone
@@ -191,15 +191,15 @@ const HandoffWidget = ({ steps, accent }) => {
               </span>
             </div>
 
-            <div className="flex items-center justify-between text-[11px] text-mist/60">
-              <span>Owner: <strong className="text-ivory/80 font-medium">{step.owner}</strong></span>
-              <span className="font-mono text-[10px]">{isDone ? "100%" : isCurrent ? "In review" : "Waiting"}</span>
+            <div className="flex items-center justify-between text-[13px] text-mist/65">
+              <span>Owner: <strong className="text-ivory/85 font-medium">{step.owner}</strong></span>
+              <span className="font-mono text-[12.5px]">{isDone ? "100%" : isCurrent ? "In review" : "Waiting"}</span>
             </div>
           </div>
         );
       })}
 
-      <div className="pt-1 flex items-center justify-between text-[11px] text-mist/60">
+      <div className="pt-1 flex items-center justify-between text-[13px] text-mist/65">
         <span>Click stage to switch owner</span>
         <span className="text-purple-400 font-mono">Stage 2 of 3</span>
       </div>
@@ -225,10 +225,10 @@ const BuiltForControl = () => {
         >
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold text-teal bg-teal/10 border border-teal/20 backdrop-blur-lg">
-            <span className="w-4 h-4 rounded-full border border-teal text-[10px] flex items-center justify-center font-mono font-bold">
+            <span className="w-5 h-5 rounded-full border border-teal text-[12px] flex items-center justify-center font-mono font-bold">
               {badgeNumber}
             </span>
-            <span className="tracking-wider uppercase text-[11px] font-bold">
+            <span className="tracking-wider uppercase text-[13px] font-bold">
               {badgeLabel}
             </span>
           </div>
@@ -249,7 +249,7 @@ const BuiltForControl = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="lg:col-span-5 text-mist/75 text-[15px] md:text-[16px] leading-relaxed"
+          className="lg:col-span-5 text-mist/80 text-[17.5px] md:text-[18.5px] leading-relaxed"
         >
           <p>{description}</p>
         </motion.div>
@@ -316,7 +316,7 @@ const BuiltForControl = () => {
                 </h3>
 
                 {/* Pillar Subtitle */}
-                <p className="mt-2.5 text-[13.5px] text-mist/75 leading-relaxed min-h-[42px]">
+                <p className="mt-2.5 text-[16px] text-mist/80 leading-relaxed min-h-[48px]">
                   {pillar.description}
                 </p>
 

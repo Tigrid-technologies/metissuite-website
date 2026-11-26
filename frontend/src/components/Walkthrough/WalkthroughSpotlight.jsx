@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Sparkles, CheckCircle2, Calendar, Clock, ShieldCheck, ArrowDown } from "lucide-react";
+import {
+  Sparkles,
+  CheckCircle2,
+  Calendar,
+  Clock,
+  ShieldCheck,
+  ArrowDown,
+} from "lucide-react";
 import { walkthroughSpotlight } from "../../utils/walkthroughItems";
 
 const WalkthroughSpotlight = () => {
@@ -17,16 +24,18 @@ const WalkthroughSpotlight = () => {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-teal/15 via-indigo/25 to-gold/10 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="wrapper relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           {/* Top glowing badge */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/[0.04] border border-gold/10 text-mist text-[12.5px] font-medium tracking-wide mb-6 backdrop-blur-md"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/[0.04] border border-gold/10 text-mist text-[15px] font-medium tracking-wide mb-6 backdrop-blur-md"
           >
             <Sparkles size={14} className="text-gold animate-pulse" />
-            <span className="text-gold font-semibold">{walkthroughSpotlight.badge}</span>
+            <span className="text-gold font-semibold">
+              {walkthroughSpotlight.badge}
+            </span>
           </motion.div>
 
           {/* Headline */}
@@ -80,7 +89,10 @@ const WalkthroughSpotlight = () => {
               className="group flex items-center gap-2.5 px-6 py-3 rounded-full bg-teal text-midnight font-bold text-sm shadow-[0_0_25px_rgba(46,196,182,0.4)] hover:shadow-[0_0_35px_rgba(46,196,182,0.6)] hover:bg-[#3de2d3] transition-all cursor-pointer"
             >
               <span>Choose your time below</span>
-              <ArrowDown size={16} className="group-hover:translate-y-0.5 transition-transform" />
+              <ArrowDown
+                size={16}
+                className="group-hover:translate-y-0.5 transition-transform"
+              />
             </button>
           </motion.div>
 
@@ -109,4 +121,3 @@ const WalkthroughSpotlight = () => {
 };
 
 export default WalkthroughSpotlight;
-

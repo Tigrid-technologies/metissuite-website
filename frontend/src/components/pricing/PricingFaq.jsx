@@ -21,7 +21,7 @@ const PricingFaq = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="inline-flex justify-center gap-2 items-center px-4 py-1 rounded-full text-[13px] text-gold border border-gold/20 bg-gold/10 backdrop-blur-lg mb-4"
+          className="inline-flex justify-center gap-2 items-center px-4 py-1 rounded-full text-[15.5px] text-gold border border-gold/20 bg-gold/10 backdrop-blur-lg mb-4"
         >
           <HelpCircle size={15} strokeWidth={1.8} />
           <span>Frequently Asked Questions</span>
@@ -43,7 +43,7 @@ const PricingFaq = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-3.5 text-mist/75 text-[15px]"
+          className="mt-3.5 text-mist/75 text-[17.5px]"
         >
           Everything you need to know about MetisSuiteAI plans, billing, and scaling your operations.
         </motion.p>
@@ -74,7 +74,7 @@ const PricingFaq = () => {
                 aria-expanded={isOpen}
               >
                 <span
-                  className={`text-[15px] md:text-[17px] font-semibold transition-colors duration-200 pr-4 ${
+                  className={`text-[17.5px] md:text-[17px] font-semibold transition-colors duration-200 pr-4 ${
                     isOpen ? "text-teal" : "text-ivory group-hover:text-teal"
                   }`}
                 >
@@ -104,7 +104,7 @@ const PricingFaq = () => {
                     transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 md:px-7 pb-6 pt-1 text-[14px] md:text-[14.5px] text-mist/85 leading-relaxed border-t border-white/[0.05]">
+                    <div className="px-6 md:px-7 pb-6 pt-1 text-[16.5px] md:text-[17px] text-mist/85 leading-relaxed border-t border-white/[0.05]">
                       {item.answer}
                     </div>
                   </motion.div>
@@ -128,10 +128,10 @@ const PricingFaq = () => {
             <MessageSquare size={22} strokeWidth={1.8} />
           </div>
           <div>
-            <h4 className="text-[16px] font-semibold text-ivory">
+            <h4 className="text-[18.5px] font-semibold text-ivory">
               Still have questions?
             </h4>
-            <p className="text-[13px] text-mist/75 mt-0.5">
+            <p className="text-[15.5px] text-mist/75 mt-0.5">
               Can't find the answer you're looking for? Speak to our advisory team.
             </p>
           </div>

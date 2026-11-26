@@ -89,7 +89,7 @@ const CallToAction = (props) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-1 rounded-full text-[13px] text-teal border border-teal/20 bg-teal/10 backdrop-blur-lg mb-5"
+              className="inline-flex items-center gap-2 px-4 py-1 rounded-full text-[15.5px] text-teal border border-teal/20 bg-teal/10 backdrop-blur-lg mb-5"
             >
               <Sparkles size={14} />
               <span>{c.badge}</span>
@@ -111,7 +111,7 @@ const CallToAction = (props) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-4 text-mist/75 text-[15px] leading-relaxed max-w-lg"
+              className="mt-4 text-mist/75 text-[17.5px] leading-relaxed max-w-lg"
             >
               {c.description}
             </motion.p>
@@ -165,7 +165,7 @@ const CallToAction = (props) => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.55 + i * 0.08 }}
-                    className="flex items-center gap-2 text-[12.5px] text-mist/70"
+                    className="flex items-center gap-2 text-[15px] text-mist/70"
                   >
                     <Check size={13} strokeWidth={3} className="text-teal" />
                     {p}

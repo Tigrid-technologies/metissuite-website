@@ -33,10 +33,10 @@ const TickerStrip = ({ items }) => {
       >
         {[...items, ...items, ...items].map((item, idx) => (
           <div key={idx} className="flex items-center gap-8">
-            <span className="text-[12px] font-mono font-bold tracking-widest text-teal/90 uppercase">
+            <span className="text-[14.5px] font-mono font-bold tracking-widest text-teal/90 uppercase">
               {item}
             </span>
-            <span className="text-teal/40 text-[10px]">◆</span>
+            <span className="text-teal/40 text-[12px]">◆</span>
           </div>
         ))}
       </motion.div>
@@ -66,10 +66,10 @@ const OperatingLayer = () => {
           >
             {/* Pill Tag */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold text-teal bg-teal/10 border border-teal/20 backdrop-blur-lg">
-              <span className="w-4 h-4 rounded-full border border-teal text-[10px] flex items-center justify-center font-mono font-bold">
+              <span className="w-5 h-5 rounded-full border border-teal text-[12px] flex items-center justify-center font-mono font-bold">
                 {header.badgeNumber}
               </span>
-              <span className="tracking-wider uppercase text-[11px] font-bold">
+              <span className="tracking-wider uppercase text-[13px] font-bold">
                 {header.badgeLabel}
               </span>
             </div>
@@ -94,10 +94,10 @@ const OperatingLayer = () => {
               delay: 0.15,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="lg:col-span-5 text-mist/75 text-[15px] md:text-[16px] leading-relaxed space-y-3"
+            className="lg:col-span-5 text-mist/80 text-[17.5px] md:text-[18.5px] leading-relaxed space-y-3"
           >
             <p>{header.paragraph1}</p>
-            <p className="text-mist/60 text-[14px]">{header.paragraph2}</p>
+            <p className="text-mist/70 text-[16.5px]">{header.paragraph2}</p>
           </motion.div>
         </div>
 
@@ -124,7 +124,7 @@ const OperatingLayer = () => {
             <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-6">
               <div>
                 {/* Conductor Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase text-teal bg-teal/10 border border-teal/20 mb-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[13.5px] font-semibold tracking-wider uppercase text-teal bg-teal/10 border border-teal/20 mb-4">
                   <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
                   <span>{conductor.badge}</span>
                 </div>
@@ -138,7 +138,7 @@ const OperatingLayer = () => {
                   </span>
                 </h3>
 
-                <p className="mt-4 text-[14.5px] text-mist/75 leading-relaxed max-w-sm">
+                <p className="mt-4 text-[17px] text-mist/80 leading-relaxed max-w-sm">
                   {conductor.description}
                 </p>
               </div>
@@ -167,7 +167,7 @@ const OperatingLayer = () => {
                     className="h-full rounded-full bg-gradient-to-r from-teal/80 to-teal shadow-[0_0_10px_#2ec4b6]"
                   />
                 </div>
-                <span className="mt-2 text-[11px] text-mist/50 block">
+                <span className="mt-2 text-[13.5px] text-mist/60 block">
                   All 6 routines flowing with human checkpoint gates.
                 </span>
               </div>
@@ -198,7 +198,7 @@ const OperatingLayer = () => {
                       className="absolute top-0 left-0 right-0 h-[2px] opacity-70 group-hover:opacity-100 transition-opacity"
                       style={{ backgroundColor: m.color }}
                     />
-                    <span className="text-[11.5px] text-mist/70 block truncate">
+                    <span className="text-[14px] text-mist/75 block truncate">
                       {m.label}
                     </span>
                     <div className="mt-2 flex items-baseline gap-1">
@@ -210,7 +210,7 @@ const OperatingLayer = () => {
                         {m.suffix}
                       </span>
                     </div>
-                    <span className="text-[11px] font-mono text-mist/50 block mt-1">
+                    <span className="text-[13.5px] font-mono text-mist/60 block mt-1">
                       {m.unit}
                     </span>
                   </motion.div>
@@ -223,7 +223,7 @@ const OperatingLayer = () => {
                   <span className="text-xs font-semibold text-ivory tracking-wide">
                     Live Operational Stream
                   </span>
-                  <span className="text-[11px] font-mono text-mist/50">
+                  <span className="text-[13.5px] font-mono text-mist/60">
                     Real-time updates
                   </span>
                 </div>
@@ -250,16 +250,16 @@ const OperatingLayer = () => {
                                 boxShadow: `0 0 8px ${act.dotColor}`,
                               }}
                             />
-                            <h4 className="text-[13.5px] font-semibold text-ivory/90 group-hover:text-white truncate">
+                            <h4 className="text-[16px] font-semibold text-ivory/90 group-hover:text-white truncate">
                               {act.title}
                             </h4>
-                            <span className="hidden sm:inline-block text-[11px] px-2 py-0.5 rounded-full bg-white/5 text-mist/60 border border-white/5">
+                            <span className="hidden sm:inline-block text-[13.5px] px-2 py-0.5 rounded-full bg-white/5 text-mist/70 border border-white/5">
                               {act.agent}
                             </span>
                           </div>
 
                           <div className="flex items-center gap-2 shrink-0">
-                            <span className="text-xs font-mono text-mist/50">
+                            <span className="text-xs font-mono text-mist/60">
                               {act.time}
                             </span>
                             <motion.div
@@ -282,7 +282,7 @@ const OperatingLayer = () => {
                               transition={{ duration: 0.25 }}
                               className="overflow-hidden"
                             >
-                              <div className="mt-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5 text-[12px] text-mist/85 leading-relaxed">
+                              <div className="mt-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5 text-[14.5px] text-mist/85 leading-relaxed">
                                 {act.detail}
                               </div>
                             </motion.div>

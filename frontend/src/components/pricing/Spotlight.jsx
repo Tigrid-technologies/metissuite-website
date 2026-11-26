@@ -88,7 +88,7 @@ const Spotlight = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex justify-center gap-2 items-center px-5 py-1 rounded-full text-[13px] text-gold border border-gold/20 bg-gold/10 backdrop-blur-lg mb-4"
+          className="inline-flex justify-center gap-2 items-center px-5 py-1 rounded-full text-[15.5px] text-gold border border-gold/20 bg-gold/10 backdrop-blur-lg mb-4"
         >
           <DollarSign size={17} strokeWidth={1.8} />
           <span>Intelligent plans. Seamless operations.</span>
@@ -109,7 +109,7 @@ const Spotlight = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-4 text-mist/80 text-[15px] max-w-xl mx-auto"
+          className="mt-4 text-mist/80 text-[17.5px] max-w-xl mx-auto"
         >
           Transparent pricing designed to scale effortlessly with your team as your AI agents conduct routine work.
         </motion.p>
@@ -154,7 +154,7 @@ const Spotlight = () => {
             )}
             <span className="relative z-10">Yearly Billing</span>
             <span
-              className={`relative z-10 text-[10px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider ${
+              className={`relative z-10 text-[13px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider ${
                 billingCycle === "yearly"
                   ? "bg-midnight/20 text-midnight"
                   : "bg-gold/20 text-gold border border-gold/30"
@@ -225,7 +225,7 @@ const Spotlight = () => {
                   </span>
 
                   {isFeatured && (
-                    <span className="flex items-center gap-1 text-[11px] font-semibold text-gold bg-gold/10 border border-gold/20 px-2.5 py-0.5 rounded-full">
+                    <span className="flex items-center gap-1 text-[13.5px] font-semibold text-gold bg-gold/10 border border-gold/20 px-2.5 py-0.5 rounded-full">
                       <Sparkles size={13} />
                       Most Popular
                     </span>
@@ -248,7 +248,7 @@ const Spotlight = () => {
                     </span>
                   </div>
                   {billingCycle === "yearly" && (
-                    <p className="text-[11px] text-teal/90 mt-1 font-medium">
+                    <p className="text-[13.5px] text-teal/90 mt-1 font-medium">
                       Billed annually (${plan.priceYear}/year)
                     </p>
                   )}
@@ -256,14 +256,14 @@ const Spotlight = () => {
 
                 {/* --- Features List (Key Highlights) --- */}
                 <div className="mt-6">
-                  <p className="text-[11px] font-bold uppercase tracking-wider text-mist/60 mb-3.5">
+                  <p className="text-[13.5px] font-bold uppercase tracking-wider text-mist/60 mb-3.5">
                     Key Features:
                   </p>
                   <ul className="space-y-3">
                     {plan.features.slice(0, 5).map((feature, fIdx) => (
                       <li
                         key={fIdx}
-                        className="flex items-start gap-2.5 text-[13px] text-ivory/85 leading-tight"
+                        className="flex items-start gap-2.5 text-[15.5px] text-ivory/85 leading-tight"
                       >
                         <div
                           className={`mt-0.5 rounded-full p-0.5 shrink-0 ${
@@ -282,10 +282,10 @@ const Spotlight = () => {
                   {plan.features.length > 5 && (
                     <a
                       href="#compare"
-                      className="inline-flex items-center gap-1 mt-4 text-[12px] font-medium text-teal/80 hover:text-teal transition-colors"
+                      className="inline-flex items-center gap-1 mt-4 text-[14.5px] font-medium text-teal/80 hover:text-teal transition-colors"
                     >
                       <span>+ {plan.features.length - 5} more features</span>
-                      <span className="text-[10px]">↓</span>
+                      <span className="text-[13px]">↓</span>
                     </a>
                   )}
                 </div>

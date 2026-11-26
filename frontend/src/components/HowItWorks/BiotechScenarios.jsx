@@ -56,13 +56,13 @@ const BiotechScenarios = () => {
                     : "bg-white/[0.03] border border-white/10 text-mist/70 hover:text-white hover:bg-white/[0.05]"
                 }`}
               >
-                <div className="text-[11px] font-semibold text-teal mb-1">
+                <div className="text-[13.5px] font-semibold text-teal mb-1">
                   Scenario 0{idx + 1}
                 </div>
                 <div className="text-sm font-bold truncate">
                   {sc.title}
                 </div>
-                <div className="mt-1 text-[11px] text-mist/60 flex items-center gap-1">
+                <div className="mt-1 text-[13.5px] text-mist/60 flex items-center gap-1">
                   <Clock size={11} className="text-gold" />
                   <span>Saves {sc.timeSaved}</span>
                 </div>
@@ -79,7 +79,7 @@ const BiotechScenarios = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.35 }}
-            className="max-w-5xl mx-auto rounded-3xl bg-gradient-to-b from-[#161a3f]/90 via-[#121636]/90 to-[#0c0f2a] border border-white/10 p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.4)] backdrop-blur-2xl"
+            className="max-w-7xl mx-auto rounded-3xl bg-gradient-to-b from-[#161a3f]/90 via-[#121636]/90 to-[#0c0f2a] border border-white/10 p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.4)] backdrop-blur-2xl"
           >
             {/* Header: Title + Category + Time Saved */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/[0.08] gap-4 mb-8">
@@ -116,7 +116,7 @@ const BiotechScenarios = () => {
                         <span className="text-xs font-bold text-teal font-secondary">
                           Step 0{i + 1}
                         </span>
-                        <span className="px-2 py-0.5 rounded-md bg-white/5 text-[10px] text-gold font-semibold">
+                        <span className="px-2 py-0.5 rounded-md bg-white/5 text-[13px] text-gold font-semibold">
                           {st.agent}
                         </span>
                       </div>

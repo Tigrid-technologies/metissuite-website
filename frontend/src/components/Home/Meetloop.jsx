@@ -73,13 +73,13 @@ const MobilePhoneMockup = ({ activeFeature, setActiveFeature }) => {
       <motion.div
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="relative z-10 w-[300px] sm:w-[335px] min-h-[580px] rounded-[48px] p-3 border-[3.5px] border-[#2c3666] bg-gradient-to-b from-[#182046] via-[#101633] to-[#0c0f24] shadow-[0_30px_70px_rgba(0,0,0,0.85),0_0_50px_rgba(46,196,182,0.18)]"
+        className="relative z-10 w-[320px] sm:w-[370px] min-h-[610px] rounded-[48px] p-3 border-[3.5px] border-[#2c3666] bg-gradient-to-b from-[#182046] via-[#101633] to-[#0c0f24] shadow-[0_30px_70px_rgba(0,0,0,0.85),0_0_50px_rgba(46,196,182,0.18)]"
       >
         {/* Subtle Edge Gloss Reflection */}
         <div className="pointer-events-none absolute inset-0 rounded-[44px] bg-gradient-to-tr from-white/10 via-transparent to-white/5 opacity-50" />
 
         {/* Screen Display */}
-        <div className="relative rounded-[38px] bg-gradient-to-b from-[#15193d] via-[#111435] to-[#0b0e27] p-5 pt-3 h-full min-h-[552px] flex flex-col justify-between overflow-hidden border border-white/10">
+        <div className="relative rounded-[38px] bg-gradient-to-b from-[#15193d] via-[#111435] to-[#0b0e27] p-5 pt-3 h-full min-h-[582px] flex flex-col justify-between overflow-hidden border border-white/10">
           {/* Dynamic Island: Centered at the very top */}
           <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-full flex items-center justify-between px-2.5 z-20 border border-white/10 shadow-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-[#1b234b]" />
@@ -87,8 +87,8 @@ const MobilePhoneMockup = ({ activeFeature, setActiveFeature }) => {
           </div>
 
           {/* Top Status Bar: 9:41 on left, Wi-Fi & Battery on right (aligned with the Island) */}
-          <div className="relative z-10 flex items-center justify-between text-[11px] font-mono text-mist/60 px-2 pt-0.5 mb-5">
-            <span className="font-semibold text-ivory text-[11.5px] tracking-tight pl-1">
+          <div className="relative z-10 flex items-center justify-between text-[13px] font-mono text-mist/60 px-2 pt-0.5 mb-5">
+            <span className="font-semibold text-ivory text-[13px] tracking-tight pl-1">
               9:41
             </span>
             <div className="flex items-center gap-1.5 pr-1">
@@ -111,7 +111,7 @@ const MobilePhoneMockup = ({ activeFeature, setActiveFeature }) => {
               >
                 {/* Brand */}
                 <div className="flex items-center gap-2 mb-6">
-                  <span className="w-5 h-5 rounded-md bg-teal/20 border border-teal/40 text-teal flex items-center justify-center font-bold text-[11px]">
+                  <span className="w-6 h-6 rounded-md bg-teal/20 border border-teal/40 text-teal flex items-center justify-center font-bold text-[13px]">
                     M
                   </span>
                   <span className="text-xs font-semibold text-ivory tracking-wide">
@@ -140,10 +140,10 @@ const MobilePhoneMockup = ({ activeFeature, setActiveFeature }) => {
 
                 {/* Copy */}
                 <div className="mt-7">
-                  <h4 className="text-xl font-bold text-ivory tracking-tight">
+                  <h4 className="text-2xl font-bold text-ivory tracking-tight">
                     {mobileScreens.screen1.heading}
                   </h4>
-                  <p className="mt-2 text-[12px] text-mist/75 leading-relaxed px-2">
+                  <p className="mt-2 text-[14.5px] text-mist/80 leading-relaxed px-2">
                     {mobileScreens.screen1.subtitle}
                   </p>
                 </div>
@@ -176,33 +176,33 @@ const MobilePhoneMockup = ({ activeFeature, setActiveFeature }) => {
                       EV
                     </div>
                     <div className="min-w-0">
-                      <h5 className="text-[13px] font-bold text-ivory truncate">
+                      <h5 className="text-[15.5px] font-bold text-ivory truncate">
                         {mobileScreens.screen2.name}
                       </h5>
-                      <span className="text-[10.5px] text-teal font-medium block truncate">
+                      <span className="text-[13px] text-teal font-medium block truncate">
                         {mobileScreens.screen2.title}
                       </span>
                     </div>
                   </div>
-                  <span className="text-[10px] font-mono text-mist/50 block">
+                  <span className="text-[12.5px] font-mono text-mist/60 block">
                     📍 {mobileScreens.screen2.capturedVia}
                   </span>
                 </div>
 
                 {/* Transcribed Voice Memo */}
                 <div className="mt-2.5 p-2.5 rounded-xl bg-teal/10 border border-teal/20 text-left">
-                  <div className="flex items-center gap-1.5 text-[10px] text-teal font-semibold mb-1">
-                    <Volume2 size={11} />
+                  <div className="flex items-center gap-1.5 text-[12.5px] text-teal font-semibold mb-1">
+                    <Volume2 size={12} />
                     <span>Transcribed Note</span>
                   </div>
-                  <p className="text-[11px] text-ivory/90 italic leading-snug">
+                  <p className="text-[13.5px] text-ivory/90 italic leading-snug">
                     {mobileScreens.screen2.memo}
                   </p>
                 </div>
 
                 {/* Real-Time Automated Triggers Checklist */}
                 <div className="mt-3 space-y-1.5 text-left">
-                  <span className="text-[10px] font-mono text-mist/60 uppercase tracking-wider block">
+                  <span className="text-[12px] font-mono text-mist/65 uppercase tracking-wider block">
                     Automated Actions Triggered
                   </span>
                   {mobileScreens.screen2.triggers.map((trig, i) => (
@@ -211,10 +211,10 @@ const MobilePhoneMockup = ({ activeFeature, setActiveFeature }) => {
                       initial={{ opacity: 0, x: -6 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.15 * i, duration: 0.3 }}
-                      className="flex items-start gap-2 text-[10.5px] text-mist/85"
+                      className="flex items-start gap-2 text-[13px] text-mist/90"
                     >
                       <CheckCircle2
-                        size={12}
+                        size={14}
                         className="text-teal shrink-0 mt-0.5"
                       />
                       <span>{trig}</span>
@@ -227,9 +227,9 @@ const MobilePhoneMockup = ({ activeFeature, setActiveFeature }) => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => setScreenState(0)}
-                  className="mt-4 w-full py-2 px-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-ivory text-[11px] font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                  className="mt-4 w-full py-2.5 px-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-ivory text-[13.5px] font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
                 >
-                  <RotateCcw size={12} />
+                  <RotateCcw size={13} />
                   <span>Reset / Scan Another Badge</span>
                 </motion.button>
               </motion.div>
@@ -245,7 +245,7 @@ const MobilePhoneMockup = ({ activeFeature, setActiveFeature }) => {
       <div className="mt-4 flex items-center gap-2">
         <button
           onClick={() => setScreenState(0)}
-          className={`px-3 py-1 rounded-full text-[11px] font-semibold transition-all cursor-pointer ${
+          className={`px-3 py-1 rounded-full text-[13.5px] font-semibold transition-all cursor-pointer ${
             screenState === 0
               ? "bg-teal/20 text-teal border border-teal/40 shadow-sm"
               : "text-mist/50 hover:text-mist"
@@ -256,7 +256,7 @@ const MobilePhoneMockup = ({ activeFeature, setActiveFeature }) => {
         <span className="text-mist/30 text-xs">→</span>
         <button
           onClick={() => setScreenState(1)}
-          className={`px-3 py-1 rounded-full text-[11px] font-semibold transition-all cursor-pointer ${
+          className={`px-3 py-1 rounded-full text-[13.5px] font-semibold transition-all cursor-pointer ${
             screenState === 1
               ? "bg-teal/20 text-teal border border-teal/40 shadow-sm"
               : "text-mist/50 hover:text-mist"
@@ -294,10 +294,10 @@ const Meetloop = () => {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold text-teal bg-teal/10 border border-teal/20 backdrop-blur-lg"
           >
-            <span className="w-4 h-4 rounded-full border border-teal text-[10px] flex items-center justify-center font-mono font-bold">
+            <span className="w-5 h-5 rounded-full border border-teal text-[12px] flex items-center justify-center font-mono font-bold">
               {header.badgeNumber}
             </span>
-            <span className="tracking-wider uppercase text-[11px] font-bold">
+            <span className="tracking-wider uppercase text-[13px] font-bold">
               {header.badgeLabel}
             </span>
           </motion.div>
@@ -322,7 +322,7 @@ const Meetloop = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-mist/75 text-[15px] md:text-[16px] leading-relaxed max-w-xl"
+            className="text-mist/80 text-[17.5px] md:text-[18.5px] leading-relaxed max-w-xl"
           >
             {header.description}
           </motion.p>
@@ -361,12 +361,12 @@ const Meetloop = () => {
                     </div>
 
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between">
-                        <h4 className="text-[14.5px] font-semibold text-ivory">
+                      <div className="flex items-center justify-between gap-2">
+                        <h4 className="text-[17px] font-semibold text-ivory">
                           {feat.title}
                         </h4>
                         <span
-                          className="text-[10.5px] font-mono px-2 py-0.5 rounded-full border"
+                          className="text-[13px] font-mono px-2.5 py-0.5 rounded-full border shrink-0"
                           style={{
                             color: feat.color,
                             borderColor: `${feat.color}35`,
@@ -376,7 +376,7 @@ const Meetloop = () => {
                           {feat.tag}
                         </span>
                       </div>
-                      <p className="mt-1 text-[12.5px] text-mist/70 leading-relaxed">
+                      <p className="mt-1.5 text-[15.5px] text-mist/80 leading-relaxed">
                         {feat.description}
                       </p>
                     </div>

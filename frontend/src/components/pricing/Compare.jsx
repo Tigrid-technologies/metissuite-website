@@ -75,7 +75,7 @@ const Compare = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="inline-flex justify-center gap-2 items-center px-4 py-1 rounded-full text-[13px] text-teal border border-teal/20 bg-teal/10 backdrop-blur-lg mb-4"
+          className="inline-flex justify-center gap-2 items-center px-4 py-1 rounded-full text-[15.5px] text-teal border border-teal/20 bg-teal/10 backdrop-blur-lg mb-4"
         >
           <Sparkles size={16} />
           <span>Feature Comparison</span>
@@ -97,7 +97,7 @@ const Compare = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-3.5 text-mist/75 text-[15px]"
+          className="mt-3.5 text-mist/75 text-[17.5px]"
         >
           A full, transparent breakdown of what each MetisSuiteAI plan includes
           so you can choose with confidence.
@@ -169,7 +169,7 @@ const Compare = () => {
                       {plan.name}{" "}
                       <span>
                         {isFeatured && (
-                          <span className="inline-block text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-full bg-teal text-midnight shadow-[0_0_8px_rgba(46,196,182,0.4)]">
+                          <span className="inline-block text-[13px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-full bg-teal text-midnight shadow-[0_0_8px_rgba(46,196,182,0.4)]">
                             Popular
                           </span>
                         )}
@@ -184,7 +184,7 @@ const Compare = () => {
                           isInView={isInView}
                         />
                       </span>
-                      <span className="text-mist/70 text-[11px]">/mo</span>
+                      <span className="text-mist/70 text-[13.5px]">/mo</span>
                     </div>
                     <button
                       type="button"
@@ -215,7 +215,7 @@ const Compare = () => {
                 className="group hover:bg-white/[0.03] transition-colors duration-150"
               >
                 {/* Feature Title */}
-                <td className="py-4 pr-4 text-[13.5px] font-medium text-ivory/90 group-hover:text-white transition-colors">
+                <td className="py-4 pr-4 text-[16px] font-medium text-ivory/90 group-hover:text-white transition-colors">
                   {feature}
                 </td>
 

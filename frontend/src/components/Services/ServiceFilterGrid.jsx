@@ -37,24 +37,24 @@ const ServiceDomainWidget = ({ serviceId, accent }) => {
   switch (serviceId) {
     case "crm-pipeline":
       return (
-        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[11px] shadow-inner">
+        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[13.5px] shadow-inner">
           <div className="flex items-center justify-between pb-2 border-b border-white/[0.06]">
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
               <span className="text-ivory font-semibold">Pipeline Telemetry</span>
             </div>
-            <span className="text-[10px] text-teal font-bold px-2 py-0.5 rounded-full bg-teal/10 border border-teal/20">
+            <span className="text-[13px] text-teal font-bold px-2 py-0.5 rounded-full bg-teal/10 border border-teal/20">
               Live Sync
             </span>
           </div>
 
-          <div className="flex items-center justify-between text-[11px] text-mist/80">
+          <div className="flex items-center justify-between text-[13.5px] text-mist/80">
             <span className="text-ivory font-medium truncate">Dr. Elena Rostova</span>
             <span className="text-teal font-bold font-secondary">$450k CDMO</span>
           </div>
 
           {/* Stepper Progress */}
-          <div className="grid grid-cols-3 gap-1.5 text-[9px] text-center">
+          <div className="grid grid-cols-3 gap-1.5 text-[12px] text-center">
             <div className="py-1 rounded bg-teal/20 text-teal border border-teal/30 font-semibold">
               ✓ Ingested
             </div>
@@ -70,13 +70,13 @@ const ServiceDomainWidget = ({ serviceId, accent }) => {
 
     case "meetloop-events":
       return (
-        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[11px] shadow-inner relative overflow-hidden">
+        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[13.5px] shadow-inner relative overflow-hidden">
           <div className="flex items-center justify-between pb-2 border-b border-white/[0.06]">
             <div className="flex items-center gap-1.5">
               <Radio size={13} className="text-gold animate-pulse" />
               <span className="text-ivory font-semibold">NFC Signal Stream</span>
             </div>
-            <span className="text-[10px] text-gold font-bold px-2 py-0.5 rounded-full bg-gold/10 border border-gold/20">
+            <span className="text-[13px] text-gold font-bold px-2 py-0.5 rounded-full bg-gold/10 border border-gold/20">
               BIO 2026 Summit
             </span>
           </div>
@@ -85,13 +85,13 @@ const ServiceDomainWidget = ({ serviceId, accent }) => {
             <div className="w-8 h-8 rounded-xl bg-gold/20 border border-gold/40 flex items-center justify-center text-gold shrink-0">
               <Smartphone size={16} />
             </div>
-            <div className="text-[11px] leading-tight">
+            <div className="text-[13.5px] leading-tight">
               <span className="text-ivory block font-semibold">Booth #302 Touchpoint</span>
-              <span className="text-mist/60 text-[10px]">Follow-up drafted in 3.8s</span>
+              <span className="text-mist/60 text-[13px]">Follow-up drafted in 3.8s</span>
             </div>
           </div>
 
-          <div className="py-1 px-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06] text-[10px] text-gold flex items-center justify-between">
+          <div className="py-1 px-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06] text-[13px] text-gold flex items-center justify-between">
             <span>Context: mRNA assay notes</span>
             <span className="text-teal">Ready for Review</span>
           </div>
@@ -100,20 +100,20 @@ const ServiceDomainWidget = ({ serviceId, accent }) => {
 
     case "ai-invoicing-purchasing":
       return (
-        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[11px] shadow-inner">
+        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[13.5px] shadow-inner">
           <div className="flex items-center justify-between pb-2 border-b border-white/[0.06]">
             <span className="text-ivory font-semibold">Invoice #INV-8910</span>
-            <span className="text-[10px] text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/20">
+            <span className="text-[13px] text-amber-400 font-bold px-2 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/20">
               OCR Audited
             </span>
           </div>
 
-          <div className="flex items-center justify-between text-[11px]">
+          <div className="flex items-center justify-between text-[13.5px]">
             <span className="text-mist/70">Antibody Batch (x12):</span>
             <span className="text-ivory line-through text-mist/50">$28,000.00</span>
           </div>
 
-          <div className="py-1 px-2.5 rounded-lg bg-amber-400/10 border border-amber-400/30 text-[10px] text-amber-300 flex items-center justify-between font-semibold">
+          <div className="py-1 px-2.5 rounded-lg bg-amber-400/10 border border-amber-400/30 text-[13px] text-amber-300 flex items-center justify-between font-semibold">
             <span>✓ 15% Contract Discount</span>
             <span>Net: $23,800.00</span>
           </div>
@@ -122,22 +122,22 @@ const ServiceDomainWidget = ({ serviceId, accent }) => {
 
     case "scientific-intelligence":
       return (
-        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[11px] shadow-inner">
+        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[13.5px] shadow-inner">
           <div className="flex items-center justify-between pb-2 border-b border-white/[0.06]">
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#38bdf8] animate-pulse" />
               <span className="text-ivory font-semibold">PubMed Monitor</span>
             </div>
-            <span className="text-[10px] text-[#38bdf8] font-bold px-2 py-0.5 rounded-full bg-[#38bdf8]/10 border border-[#38bdf8]/20">
+            <span className="text-[13px] text-[#38bdf8] font-bold px-2 py-0.5 rounded-full bg-[#38bdf8]/10 border border-[#38bdf8]/20">
               Daily Crawl 06:00
             </span>
           </div>
 
-          <div className="text-[11px] text-ivory/90 truncate">
+          <div className="text-[13.5px] text-ivory/90 truncate">
             "Target Biomarkers in mRNA Delivery"
           </div>
 
-          <div className="flex items-center justify-between text-[10px] text-mist/60 pt-1 border-t border-white/[0.06]">
+          <div className="flex items-center justify-between text-[13px] text-mist/60 pt-1 border-t border-white/[0.06]">
             <span>Verified Source: Nature Bio</span>
             <span className="text-[#38bdf8] font-bold">99.2% Match</span>
           </div>
@@ -146,20 +146,20 @@ const ServiceDomainWidget = ({ serviceId, accent }) => {
 
     case "meeting-dispatch":
       return (
-        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[11px] shadow-inner">
+        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[13.5px] shadow-inner">
           <div className="flex items-center justify-between pb-2 border-b border-white/[0.06]">
             <span className="text-ivory font-semibold">Calendar Dispatch</span>
-            <span className="text-[10px] text-[#a855f7] font-bold px-2 py-0.5 rounded-full bg-[#a855f7]/10 border border-[#a855f7]/20">
+            <span className="text-[13px] text-[#a855f7] font-bold px-2 py-0.5 rounded-full bg-[#a855f7]/10 border border-[#a855f7]/20">
               Active Call
             </span>
           </div>
 
-          <div className="flex items-center justify-between text-[11px]">
+          <div className="flex items-center justify-between text-[13.5px]">
             <span className="text-ivory truncate">30-Min Technical Demo</span>
             <span className="text-[#a855f7] font-bold">10:00 AM</span>
           </div>
 
-          <div className="py-1 px-2 rounded-lg bg-white/[0.03] text-[10px] text-mist/80 flex items-center gap-1.5">
+          <div className="py-1 px-2 rounded-lg bg-white/[0.03] text-[13px] text-mist/80 flex items-center gap-1.5">
             <CheckCircle2 size={12} className="text-[#a855f7]" />
             <span>Audio transcribed • 3 action items routed</span>
           </div>
@@ -168,20 +168,20 @@ const ServiceDomainWidget = ({ serviceId, accent }) => {
 
     case "governance-checkpoints":
       return (
-        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[11px] shadow-inner">
+        <div className="rounded-2xl bg-[#090c21]/90 border border-white/[0.08] p-3.5 space-y-2.5 font-mono text-[13.5px] shadow-inner">
           <div className="flex items-center justify-between pb-2 border-b border-white/[0.06]">
             <span className="text-ivory font-semibold">Human Checkpoint</span>
-            <span className="text-[10px] text-emerald-400 font-bold px-2 py-0.5 rounded-full bg-emerald-400/10 border border-emerald-400/20">
+            <span className="text-[13px] text-emerald-400 font-bold px-2 py-0.5 rounded-full bg-emerald-400/10 border border-emerald-400/20">
               Tier 2 Supervised
             </span>
           </div>
 
-          <div className="flex items-center justify-between text-[10px] text-mist/80">
+          <div className="flex items-center justify-between text-[13px] text-mist/80">
             <span>External Email Release:</span>
             <button
               type="button"
               onClick={() => setDemoApproved(!demoApproved)}
-              className={`px-2 py-1 rounded text-[10px] font-bold transition-all cursor-pointer ${
+              className={`px-2 py-1 rounded text-[13px] font-bold transition-all cursor-pointer ${
                 demoApproved
                   ? "bg-emerald-400 text-midnight shadow-[0_0_10px_rgba(52,211,153,0.4)]"
                   : "bg-emerald-400/20 text-emerald-300 border border-emerald-400/40 hover:bg-emerald-400/30"
@@ -191,7 +191,7 @@ const ServiceDomainWidget = ({ serviceId, accent }) => {
             </button>
           </div>
 
-          <div className="text-[9px] text-mist/50 truncate">
+          <div className="text-[12px] text-mist/50 truncate">
             Audit Hash: SHA-256:7f4a...Verified
           </div>
         </div>
@@ -234,7 +234,7 @@ const ServiceFilterGrid = ({ activeCategory }) => {
         {/* Bento Grid */}
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
         >
           <AnimatePresence>
             {filteredServices.map((service) => {
@@ -284,7 +284,7 @@ const ServiceFilterGrid = ({ activeCategory }) => {
                       </div>
 
                       <span
-                        className="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5"
+                        className="px-3 py-1 rounded-full text-[13.5px] font-bold uppercase tracking-wider flex items-center gap-1.5"
                         style={{
                           backgroundColor: `${service.accent}12`,
                           color: service.accent,
@@ -336,7 +336,7 @@ const ServiceFilterGrid = ({ activeCategory }) => {
 
                     {/* Core Capabilities Checklist */}
                     <div className="space-y-2 mb-5">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-mist/50 block">
+                      <span className="text-[13px] font-bold uppercase tracking-wider text-mist/50 block">
                         Core Capabilities:
                       </span>
                       {service.keyCapabilities.slice(0, isExpanded ? 4 : 2).map((cap, i) => (
@@ -361,10 +361,10 @@ const ServiceFilterGrid = ({ activeCategory }) => {
                           transition={{ duration: 0.3 }}
                           className="pt-3 pb-1 border-t border-white/[0.08] text-xs space-y-1.5 overflow-hidden"
                         >
-                          <span className="font-bold text-teal block uppercase tracking-wider text-[10px]">
+                          <span className="font-bold text-teal block uppercase tracking-wider text-[13px]">
                             Live Routine Case:
                           </span>
-                          <p className="text-mist/90 font-mono bg-[#090c21] p-3 rounded-xl border border-white/[0.05] leading-relaxed text-[11.5px]">
+                          <p className="text-mist/90 font-mono bg-[#090c21] p-3 rounded-xl border border-white/[0.05] leading-relaxed text-[14px]">
                             "{service.sampleUseCase}"
                           </p>
                         </motion.div>
